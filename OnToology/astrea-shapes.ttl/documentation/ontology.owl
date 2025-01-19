@@ -2216,19 +2216,19 @@
         <shacl:targetClass rdf:resource="http://example.org/stelldj#0"/>
     </NamedIndividual>
     <rdf:Description rdf:nodeID="genid5">
-        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#MarcaSuperior"/>
         <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid6">
-        <shacl:class rdf:resource="http://purl.org/holy/ns#FossilFuel"/>
-        <shacl:path rdf:resource="http://example.org/stelldj#ConsumeCombustible"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid7">
         <shacl:class rdf:resource="http://example.org/stelldj#MarcaInferior"/>
         <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
     </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <shacl:class rdf:resource="http://purl.org/holy/ns#FossilFuel"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#ConsumeCombustible"/>
+    </rdf:Description>
     <rdf:Description rdf:nodeID="genid8">
-        <shacl:class rdf:resource="http://example.org/stelldj#MarcaSuperior"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
         <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid9">
@@ -2236,12 +2236,12 @@
         <shacl:path rdf:resource="http://dbpedia.org/ontology/owns"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid10">
-        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
-        <shacl:path rdf:resource="http://dbpedia.org/ontology/owns"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid11">
         <shacl:class rdf:resource="https://w3id.org/timebank#Electricity"/>
         <shacl:path rdf:resource="http://example.org/stelldj#ConsumeCombustible"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid11">
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:path rdf:resource="http://dbpedia.org/ontology/owns"/>
     </rdf:Description>
 </rdf:RDF>
 
