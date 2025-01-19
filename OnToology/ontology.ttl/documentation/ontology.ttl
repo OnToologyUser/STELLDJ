@@ -1,0 +1,962 @@
+@prefix : <http://example.org/stelldj#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/stelldj#> .
+
+<http://example.org/stelldj#> rdf:type owl:Ontology ;
+                               <http://purl.org/dc/elements/1.1/creator> "Juan Murillo" ;
+                               <http://purl.org/dc/elements/1.1/title> "StellDJ" ;
+                               <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by-nc-sa4.0" ;
+                               owl:versionInfo "0.0.1" ;
+                               <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+###  https://wordnet-rdf.princeton.edu/ontology#hyponym
+<https://wordnet-rdf.princeton.edu/ontology#hyponym> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology/owns
+<http://dbpedia.org/ontology/owns> rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf :IsOwnedBy ;
+                                   rdfs:domain :Comprador ;
+                                   rdfs:range [ rdf:type owl:Class ;
+                                                owl:unionOf ( :ModeloVendido
+                                                              :SeguroDeCoche
+                                                            )
+                                              ] ;
+                                   rdfs:isDefinedBy <http://dbpedia.org/ontology/> ;
+                                   rdfs:label "Posee"@es ,
+                                              "owns"@en .
+
+
+###  http://example.org/stelldj#Asegura
+:Asegura rdf:type owl:ObjectProperty ;
+         rdfs:domain :SeguroDeCoche ;
+         rdfs:range :ModeloVendido ;
+         rdfs:comment "Concierta una póliza de seguros con una entidad aseguradora para prevenir las consecuencias económicas desfavorables de un riesgo"@es ;
+         rdfs:label "asegura"@es .
+
+
+###  http://example.org/stelldj#ConsumeCombustible
+:ConsumeCombustible rdf:type owl:ObjectProperty ;
+                    rdfs:domain :MotorDeCoche ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( <http://purl.org/holy/ns#FossilFuel>
+                                               <https://w3id.org/timebank#Electricity>
+                                             )
+                               ] ;
+                    rdfs:comment "Combustible utilizado para hacer funcionar un vehículo"@es ;
+                    rdfs:label "consume combustible"@es .
+
+
+###  http://example.org/stelldj#IsOwnedBy
+:IsOwnedBy rdf:type owl:ObjectProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :ModeloVendido
+                                       :SeguroDeCoche
+                                     )
+                       ] ;
+           rdfs:range :Comprador ;
+           rdfs:comment "Relación de pertenencia que tiene un objeto con una persona o lugar"@es ;
+           rdfs:label "Es propiedad de"@es ,
+                      "Is owned by"@en .
+
+
+###  http://example.org/stelldj#PermiteAparcarGratis
+:PermiteAparcarGratis rdf:type owl:ObjectProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :ECO
+                                                  <http://example.org/stelldj#0>
+                                                )
+                                  ] ;
+                      rdfs:range <http://dbpedia.org/ontology/CapitalOfRegion> ;
+                      rdfs:comment "Relación entre el vehículo y el lugar donde puede aparcar sin coste adicional"@es ;
+                      rdfs:label "permite aparcar gratis"@es .
+
+
+###  http://example.org/stelldj#RealizoVenta
+:RealizoVenta rdf:type owl:ObjectProperty ;
+              rdfs:domain :Concesionario ;
+              rdfs:range :ModeloVendido ;
+              rdfs:comment "Relación entre persona o entidad y el objeto que fue vendido"@es ;
+              rdfs:label "Realizó venta"@es .
+
+
+###  http://example.org/stelldj#TieneCambio
+:TieneCambio rdf:type owl:ObjectProperty ;
+             rdfs:domain :ModeloVendido ;
+             rdfs:range :CajaDeCambios ;
+             rdfs:comment "Relación entre la caja de cambios y el ccohe que la posee"@es ;
+             rdfs:label "tiene cambio"@es .
+
+
+###  http://example.org/stelldj#TieneDA
+:TieneDA rdf:type owl:ObjectProperty ;
+         rdfs:domain :ModeloVendido ;
+         rdfs:range :DispositivoAmbiental ;
+         rdfs:comment "Relación entre el dispositivo ambiental de un coche y el propio coche"@es ;
+         rdfs:label "Tiene dispositivo ambiental"@es .
+
+
+###  http://example.org/stelldj#TieneMotor
+:TieneMotor rdf:type owl:ObjectProperty ;
+            rdfs:domain :ModeloVendido ;
+            rdfs:range :MotorDeCoche ;
+            rdfs:comment "Relación entre el motor de un coche y el propio coche"@es ;
+            rdfs:label "Tiene motor"@es .
+
+
+###  http://example.org/stelldj#TieneNumero
+:TieneNumero rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Comprador
+                                         :Concesionario
+                                       )
+                         ] ;
+             rdfs:range :TelephoneNumber ;
+             rdfs:comment "Relación entre el número de teléfono de una persona o entidad y la propia persona o entidad"@es ;
+             rdfs:label "Tiene numero"@es .
+
+
+###  http://example.org/stelldj#TieneRuedas
+:TieneRuedas rdf:type owl:ObjectProperty ;
+             rdfs:domain :ModeloVendido ;
+             rdfs:range :Rueda ;
+             rdfs:comment "Relación entre las ruedas de un coche y el propio coche"@es ;
+             rdfs:label "Tiene ruedas"@es .
+
+
+###  http://example.org/stelldj#TieneTraccion
+:TieneTraccion rdf:type owl:ObjectProperty ;
+               rdfs:domain :ModeloVendido ;
+               rdfs:range :Traccion ;
+               rdfs:comment "Relación entre la tracción de un coche y el coche"@es ;
+               rdfs:label "Tiene traccion"@es .
+
+
+###  http://www.owl-ontologies.com/dco#isLocatedAt
+<http://www.owl-ontologies.com/dco#isLocatedAt> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain :Concesionario ;
+                                                rdfs:range <http://dbpedia.org/ontology/City> ;
+                                                rdfs:comment "Posición o punto geográfico en el que se encuentra un determinado lugar, comercio u objeto"@es ;
+                                                rdfs:label "Está localizado en"@es ,
+                                                           "is located at"@en .
+
+
+###  https://w3id.org/EUTaxO#belongsTo
+<https://w3id.org/EUTaxO#belongsTo> rdf:type owl:ObjectProperty ,
+                                             owl:TransitiveProperty ;
+                                    rdfs:domain [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :MarcaInferior
+                                                                :MarcaSuperior
+                                                                :ModeloVendido
+                                                              )
+                                                ] ;
+                                    rdfs:range [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :MarcaInferior
+                                                               :MarcaSuperior
+                                                               :ModeloVendido
+                                                             )
+                                               ] ;
+                                    rdfs:comment "Defines a hierarchy from more generic taxa, to more specific ones" ;
+                                    rdfs:label "Pertenece a"@es ,
+                                               "belongsTo"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/stelldj#Acelera0a100
+:Acelera0a100 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ModeloVendido ;
+              rdfs:range xsd:float ;
+              rdfs:comment "Tiempo que tarda un coche en pasar de 0 a 100 Km/h"@es ;
+              rdfs:label "Aceleración de 0 a 100 Km/h"@es .
+
+
+###  http://example.org/stelldj#Cilindrada
+:Cilindrada rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :MotorHibrido
+                                        :MotorTermico
+                                      )
+                        ] ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "La cilindrada de un carro, también conocida como desplazamiento del motor, es el volumen combinado de barrido de los pistones dentro de los cilindros de un motor, y se expresa en litros o centímetros cúbicos (c.c. o cm^3)."@es ;
+            rdfs:label "Cilindrada"@es .
+
+
+###  http://example.org/stelldj#CombustibleCada100
+:CombustibleCada100 rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ModeloVendido ;
+                    rdfs:range xsd:float ;
+                    rdfs:comment "Combustible consumido por el vehículo en 100 Km"@es ;
+                    rdfs:label "Combustible consumido cada 100 Km"@es .
+
+
+###  http://example.org/stelldj#EmisionesWLTP
+:EmisionesWLTP rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DispositivoAmbiental ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "Emisiones emitidas por un coche de acuerdo con WLTP"@es ;
+               rdfs:label "Emisiones WLTP"@es .
+
+
+###  http://example.org/stelldj#FechaDeVenta
+:FechaDeVenta rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Concesionario ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "Fecha en la que se realizó la venta del vehículo"@es ;
+              rdfs:label "Fecha de venta"@es .
+
+
+###  http://example.org/stelldj#Marchas
+:Marchas rdf:type owl:DatatypeProperty ;
+         rdfs:domain :CajaDeCambios ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Número de marchas del coche."@es ;
+         rdfs:label "Marchas"@es .
+
+
+###  http://example.org/stelldj#PerteneceAGama
+:PerteneceAGama rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ModeloVendido ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Gama en la que se sitúa un coche debido a su precio de venta al público"@es ;
+                rdfs:label "Pertenece a gama"@es .
+
+
+###  http://example.org/stelldj#PerteneceASegmento
+:PerteneceASegmento rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ModeloVendido ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Los segmentos de coches son clasificaciones utilizadas por la industria automovilística para agrupar vehículos según características como tamaño, capacidad, precio y tipo de motor."@es ;
+                    rdfs:label "Pertenece a segmento"@es .
+
+
+###  http://example.org/stelldj#RecargaElectrica
+:RecargaElectrica rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :MotorElectrico
+                                              :MotorHibrido
+                                            )
+                              ] ;
+                  rdfs:range xsd:float ;
+                  rdfs:comment "Cantidad de carga que pasa por la sección transversal de un conductor eléctrico en un segundo, cuando la corriente eléctrica es de un amperio."@es ;
+                  rdfs:label "recarga electrica"@es .
+
+
+###  http://example.org/stelldj#TieneAltura
+:TieneAltura rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :ModeloVendido
+                                         :Rueda
+                                       )
+                         ] ;
+             rdfs:range xsd:float ;
+             rdfs:comment "Medida del coche considerada verticalmente desde su punto más elevado hasta su base."@es ;
+             rdfs:label "tiene altura"@es .
+
+
+###  http://example.org/stelldj#TieneAnchura
+:TieneAnchura rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :ModeloVendido
+                                          :Rueda
+                                        )
+                          ] ;
+              rdfs:range xsd:float ;
+              rdfs:comment "Medida del coche considerada horizontalmente desde un lado al otro."@es ;
+              rdfs:label "tiene anchura"@es .
+
+
+###  http://example.org/stelldj#TieneAutonomiaTotal
+:TieneAutonomiaTotal rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ModeloVendido ;
+                     rdfs:range xsd:float ;
+                     rdfs:comment "Distancia que puede recorrer el vehículo con un depósito completo"@es ;
+                     rdfs:label "tiene autonomia total"@es .
+
+
+###  http://example.org/stelldj#TieneCV
+:TieneCV rdf:type owl:DatatypeProperty ;
+         rdfs:domain :MotorDeCoche ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Caballos de vapor (CV) que tiene de potencia del vehículo"@es ;
+         rdfs:label "Tiene CV"@es .
+
+
+###  http://example.org/stelldj#TieneCapacidadMaletero
+:TieneCapacidadMaletero rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :ModeloVendido ;
+                        rdfs:range xsd:integer ;
+                        rdfs:comment "Volumen que tiene el maletero del vehículo"@es ;
+                        rdfs:label "tiene capacidad maletero"@es .
+
+
+###  http://example.org/stelldj#TieneKV
+:TieneKV rdf:type owl:DatatypeProperty ;
+         rdfs:domain :MotorDeCoche ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Kilovatios (KV) que tiene de potencia del vehículo, siendo esta la potencia según el Sistema Internacional de Unidades"@es ;
+         rdfs:label "tiene KV"@es .
+
+
+###  http://example.org/stelldj#TieneLongitud
+:TieneLongitud rdf:type owl:DatatypeProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :ModeloVendido
+                                           :Rueda
+                                         )
+                           ] ;
+               rdfs:range xsd:float ;
+               rdfs:comment "Medida que expresa la distancia entre dos puntos"@es ;
+               rdfs:label "tiene longitud"@es .
+
+
+###  http://example.org/stelldj#TienePaginaWeb
+:TienePaginaWeb rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :DispositivoAmbiental
+                                            :MarcaInferior
+                                            :MarcaSuperior
+                                          )
+                            ] ;
+                rdfs:range xsd:anyURI ;
+                rdfs:comment "URL a la página web de referencia"@es ;
+                rdfs:label "tiene pagina web"@es .
+
+
+###  http://example.org/stelldj#TieneParMaximo
+:TieneParMaximo rdf:type owl:DatatypeProperty ;
+                rdfs:domain :MotorDeCoche ;
+                rdfs:range xsd:integer ;
+                rdfs:comment "Fuerza que el motor es capaz de transmitir en un régimen de giro sobre un eje de transmisión"@es ;
+                rdfs:label "tiene par maximo"@es .
+
+
+###  http://example.org/stelldj#TienePlazas
+:TienePlazas rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ModeloVendido ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "Número de asientos del vehículo"@es ;
+             rdfs:label "tiene plazas"@es .
+
+
+###  http://example.org/stelldj#TieneVelocidadMaxima
+:TieneVelocidadMaxima rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :ModeloVendido ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Máximo cantidad de espacio por unidad de tiempo capaz de ser recorrida por el vehículo"@es ;
+                      rdfs:label "tiene velocidad maxima"@es .
+
+
+###  http://example.org/stelldj#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Comprador ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Nombre del comprador"@es ;
+         rdfs:label "Tiene nombre"@es ,
+                    "has name"@en .
+
+
+###  http://schema.org/price
+<http://schema.org/price> rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :SeguroDeCoche ;
+                          rdfs:range xsd:float ;
+                          rdfs:comment "El precio de oferta de un producto, o de un componente del precio cuando se adjunta a PriceSpecification y sus subtipos."@es ,
+                                       "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes."@en ;
+                          rdfs:isDefinedBy <http://dbpedia.org/ontology/> ;
+                          rdfs:label "price"@en .
+
+
+###  http://www.owl-ontologies.com/s4envi#hasColor
+<http://www.owl-ontologies.com/s4envi#hasColor> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain :ModeloVendido ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "A relation between a light emitted and its color."@en ,
+                                                             "Una relación entre la luz emitida y su color."@es ;
+                                                rdfs:label "Tiene color"@es ,
+                                                           "has color"@en .
+
+
+###  http://www.owl-ontologies.com/saref#hasValue
+<http://www.owl-ontologies.com/saref#hasValue> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain :TelephoneNumber ;
+                                               rdfs:range xsd:integer ;
+                                               rdfs:comment "Valor de una propiedad expresado como un literal RDF. Tenga en cuenta que, aunque se esperen valores decimales, los valores podrían utilizar otros tipos de datos."@es ,
+                                                            "Value of a property value expressed as an RDF literal. Note that, even if decimal values are expected, values could use other datatypes."@en ;
+                                               rdfs:label "Tiene valor"@es ,
+                                                          "has value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/CapitalOfRegion
+<http://dbpedia.org/ontology/CapitalOfRegion> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://dbpedia.org/ontology/City> ;
+                                              rdfs:comment "La mayoría de comunidades autónomas tienen una capital establecida, siendo esta la ciudad con mas densidad poblacional"@es ;
+                                              rdfs:isDefinedBy <http://dbpedia.org/ontology/> ;
+                                              rdfs:label "Capital Of Region"@en ,
+                                                         "Capital de Región"@es .
+
+
+###  http://dbpedia.org/ontology/City
+<http://dbpedia.org/ontology/City> rdf:type owl:Class ;
+                                   rdfs:comment "Una ciudad es un asentamiento de población humana con atribuciones y funciones políticas, administrativas, económicas y religiosas, a diferencia de los núcleos rurales que carecen de ellas, total o parcialmente. Esto tiene su reflejo material en la presencia de edificios específicos y en su configuración urbanística.1"@es ;
+                                   rdfs:isDefinedBy <http://dbpedia.org/ontology/> ;
+                                   rdfs:label "City"@en ,
+                                              "Ciudad"@es .
+
+
+###  http://example.org/stelldj#C
+:C rdf:type owl:Class ;
+   rdfs:subClassOf :DispositivoAmbiental ;
+   owl:disjointWith :ECO ,
+                    <http://example.org/stelldj#0> ;
+   rdfs:comment "Etiqueta C: Vehículos de combustión interna que cumplen con las últimas emisiones EURO. Tendrán derecho a esta etiqueta turismos y furgonetas ligeras de gasolina matriculadas a partir de enero de 2006 y diésel a partir de septiembre de 2015. Vehículos de más de 8 plazas, excluido el conductor, y pesados tanto de gasolina como diésel, matriculados desde 2014."@es ;
+   rdfs:label "C"@es .
+
+
+###  http://example.org/stelldj#CajaDeCambios
+:CajaDeCambios rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :Marchas ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "En los vehículos, la caja de cambios o caja de velocidades (también llamada simplemente caja) es el elemento encargado de obtener en las ruedas el par motor, suficiente para poner en movimiento el vehículo parado, y una vez en marcha obtener un par suficiente en ellas para vencer las resistencias al avance, fundamentalmente las derivadas del perfil aerodinámico, de rozamiento con la rodadura y de pendiente en ascenso."@es ;
+               rdfs:label "Caja De Cambios"@es .
+
+
+###  http://example.org/stelldj#CambioAutomatico
+:CambioAutomatico rdf:type owl:Class ;
+                  rdfs:subClassOf :CajaDeCambios ;
+                  owl:disjointWith :CambioManual ;
+                  rdfs:comment "Una transmisión automática o caja automática es una caja de cambios de automóviles u otro tipo de vehículos que puede encargarse por sí misma de cambiar la relación de cambio automáticamente a medida que el vehículo se mueve, liberando así al conductor de la tarea de cambiar de marcha manualmente."@es ;
+                  rdfs:label "Cambio Automatico"@es .
+
+
+###  http://example.org/stelldj#CambioManual
+:CambioManual rdf:type owl:Class ;
+              rdfs:subClassOf :CajaDeCambios ;
+              rdfs:comment "Una transmisión manual o mecánica1​ es una caja de cambios que no puede alterar la relación de cambio por sí sola, requiriendo la intervención del conductor para hacer esto. Por lo tanto, se diferencia de una transmisión automática en que esta última sí puede cambiar de marcha de forma autónoma."@es ;
+              rdfs:label "Cambio Manual"@es .
+
+
+###  http://example.org/stelldj#Comprador
+:Comprador rdf:type owl:Class ;
+           rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://dbpedia.org/ontology/owns> ;
+                             owl:allValuesFrom :ModeloVendido
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://dbpedia.org/ontology/owns> ;
+                             owl:allValuesFrom :SeguroDeCoche
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :TieneNumero ;
+                             owl:allValuesFrom :TelephoneNumber
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasName ;
+                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                           ] ;
+           rdfs:comment "Persona que compra un coche."@es ;
+           rdfs:label "Comprador"@es .
+
+
+###  http://example.org/stelldj#Concesionario
+:Concesionario rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :RealizoVenta ;
+                                 owl:allValuesFrom :ModeloVendido
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneNumero ;
+                                 owl:allValuesFrom :TelephoneNumber
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.owl-ontologies.com/dco#isLocatedAt> ;
+                                 owl:allValuesFrom <http://dbpedia.org/ontology/City>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :RealizoVenta ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "Un concesionario o concesionaria es un comercio minorista que vende automóviles nuevos o de segunda mano. En la mayoría de los casos, los concesionarios son empresas independientes, autorizadas por las marcas fabricantes a vender sus vehículos por medio de un contrato de concesión. Para operar, los concesionarios emplean vendedores especializados y disponen de un salón de ventas para exhibir sus productos al público. Muchos desarrollan también actividades periféricas a la venta de autos, como revisión y mantenimiento mecánico, venta de repuestos, ejecución de garantías y gestiones de matrícula."@es ;
+               rdfs:label "Concesionario"@es .
+
+
+###  http://example.org/stelldj#Diesel
+:Diesel rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.org/holy/ns#FossilFuel> ;
+        rdfs:comment "El diésel (también conocido como gasóleo, gasoil, dísel o ACPM, siglas de «Aceite Combustible Para Motores») es un hidrocarburo líquido de densidad sobre 850 kg (1874 libras)/m³ o 0.85 g/cm³ a 15 °C (59 °F), compuesto fundamentalmente por parafinas y utilizado principalmente como combustible en calefacción y en motores diésel.4​5​ Su poder calorífico inferior es de 35,86 MJ (10,0 kWh)/L o 43,1 MJ (12,0 kWh)/kg,​ que depende de su composición."@es ;
+        rdfs:label "Diésel"@es ,
+                   "Gasóleo"@es .
+
+
+###  http://example.org/stelldj#DispositivoAmbiental
+:DispositivoAmbiental rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty :EmisionesWLTP ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :TienePaginaWeb ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
+                      rdfs:comment "El distintivo o dispositivo ambiental es una manera de clasificar los vehículos en función de su eficiencia energética, teniendo en cuenta el impacto medioambiental de los mismos."@es ;
+                      rdfs:label "Dispositivo Ambiental"@es .
+
+
+###  http://example.org/stelldj#ECO
+:ECO rdf:type owl:Class ;
+     rdfs:subClassOf :DispositivoAmbiental ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :PermiteAparcarGratis ;
+                       owl:someValuesFrom <http://dbpedia.org/ontology/CapitalOfRegion>
+                     ] ;
+     owl:disjointWith <http://example.org/stelldj#0> ;
+     rdfs:comment "Etiqueta Eco: Los siguientes en el escalón de eficiencia, se trata en su mayoría de vehículos híbridos, gas o ambos. Tendrán derecho a esta etiqueta eléctricos enchufables con autonomía inferior a 40 km, híbridos no enchufables (HEV), vehículos propulsados por gas natural y gas (GNC y GNL) o gas licuado del petróleo (GLP). Deben cumplir los criterios de la etiqueta C."@es ;
+     rdfs:label "E C O"@es .
+
+
+###  http://example.org/stelldj#Gasolina
+:Gasolina rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.org/holy/ns#FossilFuel> ;
+          rdfs:comment "La gasolina1 (también conocida como gasoleno; nafta en Argentina, Paraguay, Uruguay; bencina en Chile; o gasolín) es un producto, derivado del petróleo por destilación, que se utiliza principalmente como combustible en la mayoría de motores de combustión interna de encendido por chispa, así como en estufas y lámparas y para limpieza con disolventes, entre otras aplicaciones."@es ;
+          rdfs:label "Gasolina"@es .
+
+
+###  http://example.org/stelldj#MarcaInferior
+:MarcaInferior rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty <https://w3id.org/EUTaxO#belongsTo> ;
+                                 owl:allValuesFrom :MarcaSuperior
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TienePaginaWeb ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "Una marca de coche se refiere al fabricante o compañía que fabrica el vehículo, mientras que el modelo representa la versión o diseño específico. Por ejemplo PEUGOT o OPEL."@es ;
+               rdfs:label "Marca Inferior"@es .
+
+
+###  http://example.org/stelldj#MarcaSuperior
+:MarcaSuperior rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TienePaginaWeb ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "Una marca superior se refiere al grupo que contiene al fabricante o compañía que fabrica el vehículo. Por ejemplo PSA o FCA."@es ;
+               rdfs:label "Marca Superior"@es .
+
+
+###  http://example.org/stelldj#ModeloVendido
+:ModeloVendido rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.org/holy/ns#Car> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneCambio ;
+                                 owl:allValuesFrom :CajaDeCambios
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneDA ;
+                                 owl:allValuesFrom :DispositivoAmbiental
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneMotor ;
+                                 owl:allValuesFrom :MotorDeCoche
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneRuedas ;
+                                 owl:allValuesFrom :Rueda
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneTraccion ;
+                                 owl:allValuesFrom :Traccion
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <https://w3id.org/EUTaxO#belongsTo> ;
+                                 owl:allValuesFrom :MarcaInferior
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :Acelera0a100 ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :CombustibleCada100 ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :PerteneceAGama ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :PerteneceASegmento ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneAltura ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneAnchura ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneAutonomiaTotal ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneCapacidadMaletero ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneLongitud ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TienePlazas ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :TieneVelocidadMaxima ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.owl-ontologies.com/s4envi#hasColor> ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               owl:disjointWith :SeguroDeCoche ;
+               rdfs:comment "Un Modelo Vendido se refiere a un vehículo automotor que ha sido comercializado y transferido por una entidad concesionaria, actuando como intermediaria, a un cliente final que lo adquiere para uso personal o privado. Este concepto implica la existencia de una transacción formal, incluyendo un contrato de compraventa, y la entrega del coche al comprador, quien se convierte en su propietario registrado."@es ;
+               rdfs:label "Modelo Vendido"@es .
+
+
+###  http://example.org/stelldj#MotorDeCoche
+:MotorDeCoche rdf:type owl:Class ;
+              rdfs:subClassOf <https://saref.etsi.org/saref4bldg/Engine> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :TieneCV ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :TieneKV ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :TieneParMaximo ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ] ;
+              rdfs:comment "El motor de coche transforma la energía de combustión interna, la eléctrica o la combinación de ambas en energía que permite generar un continuo impulso mecánico cuya fuerza hace girar las ruedas para que el coche pueda desplazarse."@es ;
+              rdfs:label "Motor De Coche"@es .
+
+
+###  http://example.org/stelldj#MotorElectrico
+:MotorElectrico rdf:type owl:Class ;
+                rdfs:subClassOf :MotorDeCoche ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :RecargaElectrica ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
+                rdfs:comment "Los motores eléctricos usan corriente alterna (AC) o corriente continua (DC) para activar los campos magnéticos del estátor y rotor, produciendo el movimiento de giro del eje del rotor para transmitir el movimiento mecánico y potencia al eje de tracción delantero y trasero."@es ;
+                rdfs:label "Motor Electrico"@es .
+
+
+###  http://example.org/stelldj#MotorHibrido
+:MotorHibrido rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :MotorElectrico
+                                                         :MotorTermico
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :MotorDeCoche ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :Cilindrada ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :RecargaElectrica ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ] ;
+              rdfs:comment "Un automóvil con motor híbrido es un tipo de vehículo caracterizado por tener dos juegos de motores diferentes pero complementarios: un motor de combustión interna con un depósito de combustible, más uno o varios motores eléctricos con batería. A lo que hay que sumar, por supuesto, las centralitas necesarias para pasar de un modo de conducción a otro o, incluso, usar ambas motorizaciones en paralelo."@es ;
+              rdfs:label "Motor Híbrido"@es .
+
+
+###  http://example.org/stelldj#MotorTermico
+:MotorTermico rdf:type owl:Class ;
+              rdfs:subClassOf :MotorDeCoche ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :Cilindrada ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ] ;
+              rdfs:comment "Un motor térmico es un tipo de propulsor que convierte la energía térmica liberada por la combustión en energía mecánica. Estos motores utilizan la combustión de un combustible, como gasolina, diésel o gas natural, para generar calor y producir movimiento. Existen diferentes tipos de motores térmicos, incluidos los de combustión interna y los motores de combustión externa."@es ;
+              rdfs:label "Motor Térmico"@es .
+
+
+###  http://example.org/stelldj#Rueda
+:Rueda rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :TieneAltura ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :TieneAnchura ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :TieneLongitud ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+       rdfs:comment "La rueda es una pieza circular que es fundamental en diferentes aspectos de la vida humana, especialmente en la ducha de los vehículos automóviles. Esencialmente, la rueda es un dispositivo que facilita el movimiento al reducir la fricción entre un cuerpo y la superficie sobre la que se sitúa."@es ;
+       rdfs:label "Rueda"@es .
+
+
+###  http://example.org/stelldj#SeguroDeCoche
+:SeguroDeCoche rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.disit.org/km4city/schema#Insurance> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :Asegura ;
+                                 owl:allValuesFrom :ModeloVendido
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://schema.org/price> ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "El seguro de coche ayuda a pagar por los daños y lesiones cuando ocurre un accidente de coches."@es ;
+               rdfs:label "Seguro De Coche"@es .
+
+
+###  http://example.org/stelldj#TelephoneNumber
+:TelephoneNumber rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.owl-ontologies.com/saref#hasValue> ;
+                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
+                 rdfs:comment "Un número de teléfono (abreviado como: tfno., tlf., teléf. o tel.)​ es una secuencia de dígitos utilizada para identificar una línea telefónica dentro de una red telefónica conmutada (RTC). El número contiene la información necesaria para identificar el punto final de la llamada. Los números de teléfono están a menudo asignados a líneas que tienen conectados dispositivos distintos de un teléfono, tales como faxes y módems. Cada uno de esos puntos de terminación de red tienen que tener un número único en la red para poder realizar una llamada telefónica."@es ;
+                 rdfs:label "Número de Teléfono"@es .
+
+
+###  http://example.org/stelldj#Traccion
+:Traccion rdf:type owl:Class ;
+          rdfs:comment "Fuerza que permite al automóvil avanzar sin resbalar"@es ;
+          rdfs:label "Tracción de coche"@es .
+
+
+###  http://example.org/stelldj#Traccion4x4
+:Traccion4x4 rdf:type owl:Class ;
+             rdfs:subClassOf :Traccion ;
+             rdfs:comment "La tracción en las cuatro ruedas, doble tracción, tracción integral o tracción total son expresiones comúnmente usadas para referirse a vehículos de turismo, todocamino y todoterreno de dos ejes. Generalmente abreviada como 4×4, o 4WD (4 Wheel Drive) y AWD (All Wheel Drive) en los países anglosajones, es un sistema de transmisión en un automóvil en el que ambos ejes pueden recibir simultáneamente la potencia del motor.​ La mayoría de los automóviles todoterreno y camionetas tienen tracción en las cuatro ruedas, y también algunos turismos y deportivos de alta gama"@es ;
+             rdfs:label "Traccion4x4"@es ,
+                        "Tracción a las cuatro ruedas"@es ,
+                        "Tracción integral"@es .
+
+
+###  http://example.org/stelldj#TraccionFrontal
+:TraccionFrontal rdf:type owl:Class ;
+                 rdfs:subClassOf :Traccion ;
+                 rdfs:comment "La tracción delantera (abreviada como FWD por sus siglas en inglés; en idiomas como el francés se utiliza simplemente la palabra \"traction\" para referirse a que la impulsión se halla en el eje delantero, y \"propulsión\" para denominar a la tracción trasera) es el sistema en el que el par motor se transmite solo al eje delantero. Es el mismo eje en el cual se suele encontrar la dirección del vehículo. La mayoría de los vehículos de tracción delantera incorporan el diferencial en la estructura de la caja de cambios."@es ;
+                 rdfs:label "Tracción Delantera"@es ,
+                            "Traccion Frontal" .
+
+
+###  http://example.org/stelldj#TraccionTrasera
+:TraccionTrasera rdf:type owl:Class ;
+                 rdfs:subClassOf :Traccion ;
+                 rdfs:comment "La tracción trasera o propulsión trasera​ (abreviada como \"RWD\" por sus siglas en inglés) es el sistema en el que la transmisión del movimiento del motor de un vehículo se realiza sobre el eje trasero."@es ;
+                 rdfs:label "Tracción Trasera"@es .
+
+
+###  http://example.org/stelldj#0
+<http://example.org/stelldj#0> rdf:type owl:Class ;
+                               rdfs:subClassOf :DispositivoAmbiental ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :PermiteAparcarGratis ;
+                                                 owl:someValuesFrom <http://dbpedia.org/ontology/CapitalOfRegion>
+                                               ] ;
+                               rdfs:comment "Etiqueta 0 emisiones: Identifica a los vehículos más eficientes. Tendrán derecho a esta etiqueta eléctricos de batería (BEV) , eléctricos de autonomía extendida (REEV), eléctricos híbridos enchufables (PHEV) con una autonomía de 40 km o vehículos de pila de combustible."@es ;
+                               rdfs:label "0"@es .
+
+
+###  http://purl.org/holy/ns#Car
+<http://purl.org/holy/ns#Car> rdf:type owl:Class ;
+                              <http://purl.org/dc/terms/references> <https://dictionary.cambridge.org/dictionary/english/car> ;
+                              rdfs:comment "El cochel (también conocido como auto, coche o carro en algunos países hispanoamericanos) es un vehículo motorizado con ruedas utilizado para el transporte. Está compuesto por diversas partes, como motor, chasis, tipo de carrocería y sistemas de dirección, frenos y suspensión. La mayoría de las definiciones de automóvil hacen referencia a los vehículos que circulan principalmente por las carreteras, con capacidad de una a ocho personas. Cuentan con cuatro neumáticos y transportan principalmente a personas, antes que mercancías."@es ;
+                              rdfs:isDefinedBy "http://schema.org/" ;
+                              rdfs:label "Car"@en ,
+                                         "Coche"@es ;
+                              <https://wordnet-rdf.princeton.edu/ontology#hyponym> "Convertible"@en ,
+                                                                                   "Coupe"@en ,
+                                                                                   "Coupé"@en ,
+                                                                                   "Electric SUV"@en ,
+                                                                                   "Electric passenger vehicle"@en ,
+                                                                                   "Hybrid Range Extender"@en ,
+                                                                                   "Hybrid Vehicle"@en ,
+                                                                                   "Hydrogen SUV"@en ,
+                                                                                   "Jeep"@en ,
+                                                                                   "Limousine"@en ,
+                                                                                   "Passenger Car"@en ,
+                                                                                   "Passenger Vehicle"@en ,
+                                                                                   "SUV"@en ,
+                                                                                   "Station Wagon"@en .
+
+
+###  http://purl.org/holy/ns#FossilFuel
+<http://purl.org/holy/ns#FossilFuel> rdf:type owl:Class ;
+                                     rdfs:comment "The subclass \"FossilFuel\" could be expanded to focus the domain scope to the creation of hydrogen concerning the value chain."@en ,
+                                                  "Un combustible fósil es aquel que procede de la biomasa producida en eras pasadas, que ha sufrido enterramiento y tras él, procesos de transformación, por aumento de presión y temperatura, hasta la formación de sustancias de gran contenido energético, como el carbón, el petróleo, o el gas natural. Al no ser energía renovable, no se considera como energía de la biomasa, aunque su origen sea orgánico o de biomasa.1​"@es ;
+                                     rdfs:label "Combustible fósil"@es ,
+                                                "Fossil Fuel"@en .
+
+
+###  http://www.disit.org/km4city/schema#Insurance
+<http://www.disit.org/km4city/schema#Insurance> rdf:type owl:Class ;
+                                                rdfs:comment "Le istanze di questa classe rappresentano, tra tutte le attività d'impresa, talune attività di assicurazioni, agenti, sub-agenti, broker e altri intermediari, anche ai fini dell'apertura di fondi pensione e di assicurazioni sulla vita."@it ,
+                                                             "The instances of this class include, among all business activities, certain insurance, agents, sub agents, brokers and other intermediaries, including for the purpose of opening pension funds and life insurance."@en ,
+                                                             "Un seguro o aseguración1​es un contrato, denominado póliza de seguro, por el que una Compañía de Seguros (el asegurador) se compromete, mediante el cobro de una prima y para el caso de que se produzca el evento cuyo riesgo es objeto de cobertura a indemnizar, dentro de los límites pactados, el daño producido al asegurado; bien a través de un capital, una renta, o a través de la prestación de un servicio. En este contrato intervienen: el asegurador, que siempre ha de ser una compañía de seguros, que es la entidad responsable de la cobertura en caso de siniestro; el asegurado, propietario de la póliza de seguro y responsable del pago de la prima correspondiente; y el beneficiario, que es la persona que cobrará la indemnización correspondiente en caso de siniestro. No siempre estas tres figuras han de ser la misma persona pudiendo ser todos distintos."@es ;
+                                                rdfs:label "Assicurazione"@it ,
+                                                           "Insurance"@en ,
+                                                           "Seguro"@es .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:comment "A person."@en ,
+                                                "Individuo de la especie humana."@es ;
+                                   rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                   rdfs:label "Person"@en ,
+                                              "Persona"@es ,
+                                              "person" ;
+                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://saref.etsi.org/saref4bldg/EnergyConversionDevice
+<https://saref.etsi.org/saref4bldg/EnergyConversionDevice> rdf:type owl:Class ;
+                                                           rdfs:comment "El dispositivo de conversión energética define la aparición de un dispositivo utilizado para realizar la conversión de energía o la transferencia de calor y que normalmente participa en un sistema de distribución de flujo."@es ,
+                                                                        "The distribution flow element EnergyConversionDevice defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."@en ;
+                                                           rdfs:label "Dispositivo de conversión energética"@es ,
+                                                                      "Energy conversion device"@en .
+
+
+###  https://saref.etsi.org/saref4bldg/Engine
+<https://saref.etsi.org/saref4bldg/Engine> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://saref.etsi.org/saref4bldg/EnergyConversionDevice> ;
+                                           rdfs:comment "An engine is a device that converts fuel into mechanical energy through combustion."@en ,
+                                                        "Un motor es un dispositivo que convierte el combustible en energía mecánica mediante la combustión."@es ;
+                                           rdfs:label "Engine"@en ,
+                                                      "Motor"@es ;
+                                           rdfs:seeAlso "https://w3id.org/ifc/IFC4_ADD1#IfcEngine" ;
+                                           <http://www.w3.org/ns/prov#hadPrimarySource> <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcengine.htm> ,
+                                                                                        <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_enginetypecommon.htm> .
+
+
+###  https://w3id.org/timebank#Electricity
+<https://w3id.org/timebank#Electricity> rdf:type owl:Class ;
+                                        rdfs:comment "Electric outlet available."@en ,
+                                                     "Flujo de electrones que circula por un conductor en un determinado momento. Se mide en amperios."@es ;
+                                        rdfs:isDefinedBy <https://w3id.org/timebank> ;
+                                        rdfs:label "Electricidad"@es ,
+                                                   "Electricity"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/stelldj#Concesionario_Mostoles
+:Concesionario_Mostoles rdf:type owl:NamedIndividual ,
+                                 :Concesionario ;
+                        :TieneNumero <http://example.org/stelldj#68941029385> .
+
+
+###  http://example.org/stelldj#Concesionario_Parla
+:Concesionario_Parla rdf:type owl:NamedIndividual ,
+                              :Concesionario ;
+                     :TieneNumero <http://example.org/stelldj#789000938> .
+
+
+###  http://example.org/stelldj#Francisco
+:Francisco rdf:type owl:NamedIndividual ,
+                    :Comprador ;
+           <http://dbpedia.org/ontology/owns> :Peugeot208 .
+
+
+###  http://example.org/stelldj#Peugeot208
+:Peugeot208 rdf:type owl:NamedIndividual ,
+                     :ModeloVendido ;
+            :IsOwnedBy :Francisco .
+
+
+###  http://example.org/stelldj#68941029385
+<http://example.org/stelldj#68941029385> rdf:type owl:NamedIndividual ,
+                                                  :TelephoneNumber .
+
+
+###  http://example.org/stelldj#789000938
+<http://example.org/stelldj#789000938> rdf:type owl:NamedIndividual ,
+                                                :TelephoneNumber .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
