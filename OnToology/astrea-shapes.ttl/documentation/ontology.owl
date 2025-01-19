@@ -1,0 +1,2252 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#"
+     xmlns:astrea="https://w3id.org/def/astrea#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#class -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#class"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#datatype -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#datatype"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#description -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#description"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#maxCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#maxCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#name -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#name"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#nodeKind -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#nodeKind"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#not -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#not"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#or -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#or"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#pattern -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#pattern"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- https://w3id.org/def/astrea#contains -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/def/astrea#contains"/>
+    
+
+
+    <!-- https://w3id.org/def/astrea#generatedShapesFrom -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/def/astrea#generatedShapesFrom"/>
+    
+
+
+    <!-- https://w3id.org/def/astrea#message -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/def/astrea#message"/>
+    
+
+
+    <!-- https://w3id.org/def/astrea#statusCode -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/def/astrea#statusCode"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#PropertyShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#PropertyShape"/>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ReportEntry -->
+
+
+    <Class rdf:about="https://w3id.org/def/astrea#ReportEntry"/>
+    
+
+
+    <!-- https://w3id.org/def/astrea#ShapeReport -->
+
+
+    <Class rdf:about="https://w3id.org/def/astrea#ShapeReport"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://astrea.linkeddata.es/report -->
+
+
+    <NamedIndividual rdf:about="http://astrea.linkeddata.es/report">
+        <rdf:type rdf:resource="https://w3id.org/def/astrea#ShapeReport"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#a40d7b370032a23fe58ee46d668b3502"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#a88996737292dcb516d6686bcfac6245"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#a93bd2fdbc1fb7825a90b9e4581ec904"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#af74cb609f6df6eaf8529dfa4a6d384a"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#b146f25348b90d3405d93c2555dfc85e"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#b84a70b58dccb36a724a460a56b29262"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#baa16a2c0c05031f0b6594d91a4f6fa5"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#be2e29c0f13378b9a59f984e057897b3"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#bebe7c2eebf3b7197efa01547361bcd3"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#c05d91935cc8968cbf14f08248754db4"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#c117d1a9600f5bbc419b4fe7211dd886"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#c1655ce66b1dd49c3da7e0cb7b3c4659"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#c96e014cd50fc6ab9da0bfcdbb274b85"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#c99ed02259db0adcda741b1212186094"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#cb83d987641e362b6b8e1f65381491d2"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#cd1901ecdf74cfaa3b0c1d3be9f0bc6b"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#cdce52ed40e44eabaf2ec1dbbb5db30e"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#d1ed5a08d4cc1cebbe8847f25969a852"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#d326d1fc2b972808ee9f01d895dd1594"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#d6137ba9df11cfebcb5c1c9cab792200"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#d9f3428649337fe7604fb87591e48f5f"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#dbdcc0da19153e16c7656fd96b77f6bf"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#de51e621aa64ec0301642646d0a30be2"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#e1c0468aec43f304b301eb7768ffadf4"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#e1cc96c1f32e1dc78553bdf9e6bf034f"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#e210c34b87a3d14048ddc9dbce4c198f"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#eacef954066e0327cff8d7570d83358d"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#ed19da3b729cc9add829452e64f11147"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#ed513e6121412b8537bc87f5235790f4"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#edadb627b45219de3073906bef2f736f"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#eef8b559d670aaa8a13fe34198234707"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#f20d0f0c5452af0499bcfc7953cdd206"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#f2776bdf2a5219f4fe2b62dd26700694"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#f33fd3bcc7e2a98647d6fb733728bb00"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#fc0bc5f028e1d1b9a7f15d81910233a0"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#fdc60d1debb9b35cd78005626d37fcaf"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#fddcc18af6645df13772740c33c01cc1"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#ff1983cd3a7e8019f72b16dbea59a63d"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#0b51e33878b1984333a0d15a032fb93b"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#0c11f9c889ca88ba01d0ff74570519cc"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#0d7877cb42905a2d7a78be686b315f41"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#0f71a2769a3b622f72e13ce33fa79e88"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#016fca42b1af50f354517a866f0c426c"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#02544b52a2933dac651da7540d9f0f2e"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#049d7741133d3ec507e4cb95f521f977"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#08ca7328df79615216b7f5ac7de46fac"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#123a7c5baefc0450a207fc034be6055e"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#135c9d1ee783186cdfec4b6d5639cca1"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#150263bfcbd5ea461e9053e77c24710b"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#1630c0ce0649c0ea5a6b705b63949909"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#18290533bafe8f06d9ee0bd03db4936f"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#19c3979c82518587482159f1b338fd37"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#2ab68592bab4143906837cb5f328153b"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#2b74ad3fe6b81b34269a7baf0235214c"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#2ce2bb9db90d976c3a82bec337ea8b87"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#2d7c689b10b6dc8751bd23ba13c7071f"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#2fe9cca6147865825312d35b909cb2f5"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#20f36731f64b26237536974231e0706a"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#2003e4c7b1aa91ee4eb089d90eebad29"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#209ae110e1bf6bed8442b1bc4f670799"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#217ed1e3080c14af3f7be078912a4059"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#2501e741a39dbbf99710a9dd548f266b"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#26817e60efff8cdcab1d3f44c22bef28"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#271d430f184d68c9969e857c5cfbbcf2"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#28f1db34fd6cf97abb86eaa1fb68ed54"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#31ca8c8cd0557f6d5aebab617535acc2"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#31284a39e4a1035d23a916dec814a034"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#3147b59c39a3cec6019dd33ac88ae6b3"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#35bb7bb44dc14d491b9ab7cae8b7ef50"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#35031e8e5d03bd81437c02d68f0484dc"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#37ef0a1d68c87805cade9f4f61061b84"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#3734de00c91b758f19ec3417318e7603"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#393d5f13374adfd0b715fb96cc2c8252"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4b2a9facb6a61aa926e2e8b05c5d73e9"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4c47733628aa926274d6770d25fe8136"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4ca46932e81e564851809ed29dc97640"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4e5748b2f21b07017c66c4cb0ebed852"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4edb44461c632f8fc2c26050f1d8d2b5"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4fb6c3953fcfe4de82cb7b98e97b7084"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4164774f56fa2eb672412e939f34b4e6"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#42bd836605e2d7f9c191b24acd931bfb"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#42d79825cd5159f94cfe50a32ee1805c"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#4236e1f9b7e84895948736c7bc782663"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#447dfc236218ac479dc67153554244f5"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#49cfe32fb4506ae564bb275365fdc840"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#5a397c28dd357106468bb458e6886b7e"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#5a84d0453710416b99bb46f6314eb69d"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#5d8c6a7f3ae072ae57b4c879aadc4ecb"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#5e4d136f87a35ec4aa2286faa66c843a"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#5f070ab8919a9cd11006ea91181385e7"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#5f5136e66496a52ae48cd6787354da8c"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#52ac464ff7ec13498da2abbf42cd3355"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#52b4745de0b23b9ffb5d8b8b7eb92da6"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#539ccf30016e44e827e127382c81b48d"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#6ad3a7ebc6ac46c9c264e6d010c1985a"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#6b57fa5410492eca093c82d82f7a673a"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#6d6848b2dd9bfff41e75031414e908de"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#635e0b61d2b6ff5adc9e6134801523f5"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#63874b90371bd527968e7ffd98a6a881"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#6421dadc0a4466fe9ddec7f881f9c5ee"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#6618c1d985f4a5f244ebde062cb55f56"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#7c1abdd73898185b69a0e7ca02f1edce"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#7c46d94d881c993e38d603c22a09323b"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#7dbacc8d3e3c5ec332fa805af5608e7a"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#7dcba1f80f8277b42dc3bd419322de98"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#7deb0ea43eac75dd6764547d416fa443"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#7f6dd1ade0b05464e30faf3f5fe34c75"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#71fab9ca99ca2d338b3f58c1b53c9b51"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#79082567ac9efbf0eabb122efa2036ea"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#8a05dcf2a5a6be3a5afe2d6a48a69ca1"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#8b83e0982e1c4385fb7feffc4a573ae8"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#8e2593526b0d6b43e9a5f8eed9e0e7de"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#8e793e250a17384727f7094f53aa65e2"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#8f75b8dc894e5c740382370fda5f04ac"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#8289c393bbca0eb0f4fc392e7acaddf6"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#84b5202c9d7910b65c0d401394a7dc1c"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#84df2f20929508705f01cc1ff674a756"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#8999b6a0124189da08fd97acef25da28"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#90d0d4e016f91c393c7cdd73fcb1f008"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#9188a44a2a8eb8045759209cb8d43b6a"/>
+        <astrea:contains rdf:resource="https://astrea.linkeddata.es/shapes#953dca644d691bb4d34d39c2b2db7ce4"/>
+        <astrea:generatedShapesFrom rdf:resource="https://astrea.linkeddata.es/report/0620946147"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/report/0620946147 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/report/0620946147">
+        <rdf:type rdf:resource="https://w3id.org/def/astrea#ReportEntry"/>
+        <astrea:message>Shapes generated with no errors</astrea:message>
+        <astrea:statusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</astrea:statusCode>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#a40d7b370032a23fe58ee46d668b3502 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#a40d7b370032a23fe58ee46d668b3502">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneCV"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#a88996737292dcb516d6686bcfac6245 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#a88996737292dcb516d6686bcfac6245">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneKV"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#a93bd2fdbc1fb7825a90b9e4581ec904 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#a93bd2fdbc1fb7825a90b9e4581ec904">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAnchura"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#af74cb609f6df6eaf8529dfa4a6d384a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#af74cb609f6df6eaf8529dfa4a6d384a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="en">Engine</rdfs:label>
+        <rdfs:label xml:lang="es">Motor</rdfs:label>
+        <rdfs:seeAlso>https://w3id.org/ifc/IFC4_ADD1#IfcEngine</rdfs:seeAlso>
+        <shacl:description xml:lang="en">An engine is a device that converts fuel into mechanical energy through combustion.</shacl:description>
+        <shacl:description xml:lang="es">Un motor es un dispositivo que convierte el combustible en energía mecánica mediante la combustión.</shacl:description>
+        <shacl:name xml:lang="en">Engine</shacl:name>
+        <shacl:name xml:lang="es">Motor</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://saref.etsi.org/saref4bldg/Engine"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#b146f25348b90d3405d93c2555dfc85e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#b146f25348b90d3405d93c2555dfc85e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <rdfs:label xml:lang="es">Persona</rdfs:label>
+        <rdfs:label>person</rdfs:label>
+        <shacl:description xml:lang="en">A person.</shacl:description>
+        <shacl:description xml:lang="es">Individuo de la especie humana.</shacl:description>
+        <shacl:name xml:lang="en">Person</shacl:name>
+        <shacl:name xml:lang="es">Persona</shacl:name>
+        <shacl:name>person</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#b84a70b58dccb36a724a460a56b29262 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#b84a70b58dccb36a724a460a56b29262">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#TelephoneNumber"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneNumero"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#baa16a2c0c05031f0b6594d91a4f6fa5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#baa16a2c0c05031f0b6594d91a4f6fa5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Marchas</rdfs:label>
+        <rdfs:label xml:lang="es">Número de marchas del coche.</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Número de marchas del coche.</shacl:description>
+        <shacl:name xml:lang="es">Marchas</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Marchas"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#be2e29c0f13378b9a59f984e057897b3 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#be2e29c0f13378b9a59f984e057897b3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAltura"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#bebe7c2eebf3b7197efa01547361bcd3 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#bebe7c2eebf3b7197efa01547361bcd3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Caballos de vapor (CV) que tiene de potencia del vehículo</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene CV</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Caballos de vapor (CV) que tiene de potencia del vehículo</shacl:description>
+        <shacl:name xml:lang="es">Tiene CV</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneCV"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c05d91935cc8968cbf14f08248754db4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c05d91935cc8968cbf14f08248754db4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Volumen que tiene el maletero del vehículo</rdfs:label>
+        <rdfs:label xml:lang="es">tiene capacidad maletero</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Volumen que tiene el maletero del vehículo</shacl:description>
+        <shacl:name xml:lang="es">tiene capacidad maletero</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneCapacidadMaletero"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c117d1a9600f5bbc419b4fe7211dd886 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c117d1a9600f5bbc419b4fe7211dd886">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Fuerza que el motor es capaz de transmitir en un régimen de giro sobre un eje de transmisión</rdfs:label>
+        <rdfs:label xml:lang="es">tiene par maximo</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Fuerza que el motor es capaz de transmitir en un régimen de giro sobre un eje de transmisión</shacl:description>
+        <shacl:name xml:lang="es">tiene par maximo</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneParMaximo"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c1655ce66b1dd49c3da7e0cb7b3c4659 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c1655ce66b1dd49c3da7e0cb7b3c4659">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Cilindrada</rdfs:label>
+        <rdfs:label xml:lang="es">La cilindrada de un carro, también conocida como desplazamiento del motor, es el volumen combinado de barrido de los pistones dentro de los cilindros de un motor, y se expresa en litros o centímetros cúbicos (c.c. o cm^3).</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">La cilindrada de un carro, también conocida como desplazamiento del motor, es el volumen combinado de barrido de los pistones dentro de los cilindros de un motor, y se expresa en litros o centímetros cúbicos (c.c. o cm^3).</shacl:description>
+        <shacl:name xml:lang="es">Cilindrada</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Cilindrada"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c96e014cd50fc6ab9da0bfcdbb274b85 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c96e014cd50fc6ab9da0bfcdbb274b85">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Motor Híbrido</rdfs:label>
+        <shacl:description xml:lang="es">Un automóvil con motor híbrido es un tipo de vehículo caracterizado por tener dos juegos de motores diferentes pero complementarios: un motor de combustión interna con un depósito de combustible, más uno o varios motores eléctricos con batería. A lo que hay que sumar, por supuesto, las centralitas necesarias para pasar de un modo de conducción a otro o, incluso, usar ambas motorizaciones en paralelo.</shacl:description>
+        <shacl:name xml:lang="es">Motor Híbrido</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#c1655ce66b1dd49c3da7e0cb7b3c4659"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#eef8b559d670aaa8a13fe34198234707"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#209ae110e1bf6bed8442b1bc4f670799"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#42bd836605e2d7f9c191b24acd931bfb"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#MotorHibrido"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c99ed02259db0adcda741b1212186094 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c99ed02259db0adcda741b1212186094">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Relación entre el vehículo y el lugar donde puede aparcar sin coste adicional</rdfs:label>
+        <rdfs:label xml:lang="es">permite aparcar gratis</rdfs:label>
+        <shacl:class rdf:resource="http://dbpedia.org/ontology/CapitalOfRegion"/>
+        <shacl:description xml:lang="es">Relación entre el vehículo y el lugar donde puede aparcar sin coste adicional</shacl:description>
+        <shacl:name xml:lang="es">permite aparcar gratis</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#PermiteAparcarGratis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#cb83d987641e362b6b8e1f65381491d2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#cb83d987641e362b6b8e1f65381491d2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Tracción de coche</rdfs:label>
+        <shacl:description xml:lang="es">Fuerza que permite al automóvil avanzar sin resbalar</shacl:description>
+        <shacl:name xml:lang="es">Tracción de coche</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#Traccion"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#cd1901ecdf74cfaa3b0c1d3be9f0bc6b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#cd1901ecdf74cfaa3b0c1d3be9f0bc6b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Marca Inferior</rdfs:label>
+        <shacl:description xml:lang="es">Una marca de coche se refiere al fabricante o compañía que fabrica el vehículo, mientras que el modelo representa la versión o diseño específico. Por ejemplo PEUGOT o OPEL.</shacl:description>
+        <shacl:name xml:lang="es">Marca Inferior</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#7c1abdd73898185b69a0e7ca02f1edce"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#7dbacc8d3e3c5ec332fa805af5608e7a"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#7dcba1f80f8277b42dc3bd419322de98"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#MarcaInferior"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#cdce52ed40e44eabaf2ec1dbbb5db30e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#cdce52ed40e44eabaf2ec1dbbb5db30e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Aceleración de 0 a 100 Km/h</rdfs:label>
+        <rdfs:label xml:lang="es">Tiempo que tarda un coche en pasar de 0 a 100 Km/h</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">Tiempo que tarda un coche en pasar de 0 a 100 Km/h</shacl:description>
+        <shacl:name xml:lang="es">Aceleración de 0 a 100 Km/h</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Acelera0a100"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d1ed5a08d4cc1cebbe8847f25969a852 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d1ed5a08d4cc1cebbe8847f25969a852">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#0"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d326d1fc2b972808ee9f01d895dd1594 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d326d1fc2b972808ee9f01d895dd1594">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#SeguroDeCoche"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d6137ba9df11cfebcb5c1c9cab792200 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d6137ba9df11cfebcb5c1c9cab792200">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Cilindrada"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d9f3428649337fe7604fb87591e48f5f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d9f3428649337fe7604fb87591e48f5f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#CajaDeCambios"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneCambio"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#dbdcc0da19153e16c7656fd96b77f6bf -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#dbdcc0da19153e16c7656fd96b77f6bf">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TienePaginaWeb"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#de51e621aa64ec0301642646d0a30be2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#de51e621aa64ec0301642646d0a30be2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#Traccion"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneTraccion"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#e1c0468aec43f304b301eb7768ffadf4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#e1c0468aec43f304b301eb7768ffadf4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#CambioManual"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#e1cc96c1f32e1dc78553bdf9e6bf034f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#e1cc96c1f32e1dc78553bdf9e6bf034f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/ontology/"/>
+        <rdfs:label xml:lang="es">El precio de oferta de un producto, o de un componente del precio cuando se adjunta a PriceSpecification y sus subtipos.</rdfs:label>
+        <rdfs:label xml:lang="en">The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.</rdfs:label>
+        <rdfs:label xml:lang="en">price</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">El precio de oferta de un producto, o de un componente del precio cuando se adjunta a PriceSpecification y sus subtipos.</shacl:description>
+        <shacl:description xml:lang="en">The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.</shacl:description>
+        <shacl:name xml:lang="en">price</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://schema.org/price"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#e210c34b87a3d14048ddc9dbce4c198f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#e210c34b87a3d14048ddc9dbce4c198f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Número de Teléfono</rdfs:label>
+        <shacl:description xml:lang="es">Un número de teléfono (abreviado como: tfno., tlf., teléf. o tel.)​ es una secuencia de dígitos utilizada para identificar una línea telefónica dentro de una red telefónica conmutada (RTC). El número contiene la información necesaria para identificar el punto final de la llamada. Los números de teléfono están a menudo asignados a líneas que tienen conectados dispositivos distintos de un teléfono, tales como faxes y módems. Cada uno de esos puntos de terminación de red tienen que tener un número único en la red para poder realizar una llamada telefónica.</shacl:description>
+        <shacl:name xml:lang="es">Número de Teléfono</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#271d430f184d68c9969e857c5cfbbcf2"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#7f6dd1ade0b05464e30faf3f5fe34c75"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#TelephoneNumber"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#eacef954066e0327cff8d7570d83358d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#eacef954066e0327cff8d7570d83358d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Emisiones WLTP</rdfs:label>
+        <rdfs:label xml:lang="es">Emisiones emitidas por un coche de acuerdo con WLTP</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Emisiones emitidas por un coche de acuerdo con WLTP</shacl:description>
+        <shacl:name xml:lang="es">Emisiones WLTP</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#EmisionesWLTP"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ed19da3b729cc9add829452e64f11147 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ed19da3b729cc9add829452e64f11147">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Asegura"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ed513e6121412b8537bc87f5235790f4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ed513e6121412b8537bc87f5235790f4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Relación entre el motor de un coche y el propio coche</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene motor</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#MotorDeCoche"/>
+        <shacl:description xml:lang="es">Relación entre el motor de un coche y el propio coche</shacl:description>
+        <shacl:name xml:lang="es">Tiene motor</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneMotor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#edadb627b45219de3073906bef2f736f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#edadb627b45219de3073906bef2f736f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Concierta una póliza de seguros con una entidad aseguradora para prevenir las consecuencias económicas desfavorables de un riesgo</rdfs:label>
+        <rdfs:label xml:lang="es">asegura</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:description xml:lang="es">Concierta una póliza de seguros con una entidad aseguradora para prevenir las consecuencias económicas desfavorables de un riesgo</shacl:description>
+        <shacl:name xml:lang="es">asegura</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Asegura"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#eef8b559d670aaa8a13fe34198234707 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#eef8b559d670aaa8a13fe34198234707">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Cilindrada"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f20d0f0c5452af0499bcfc7953cdd206 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f20d0f0c5452af0499bcfc7953cdd206">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Relación entre el dispositivo ambiental de un coche y el propio coche</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene dispositivo ambiental</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#DispositivoAmbiental"/>
+        <shacl:description xml:lang="es">Relación entre el dispositivo ambiental de un coche y el propio coche</shacl:description>
+        <shacl:name xml:lang="es">Tiene dispositivo ambiental</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneDA"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f2776bdf2a5219f4fe2b62dd26700694 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f2776bdf2a5219f4fe2b62dd26700694">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#PerteneceAGama"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f33fd3bcc7e2a98647d6fb733728bb00 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f33fd3bcc7e2a98647d6fb733728bb00">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#RecargaElectrica"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#fc0bc5f028e1d1b9a7f15d81910233a0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#fc0bc5f028e1d1b9a7f15d81910233a0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">E C O</rdfs:label>
+        <shacl:description xml:lang="es">Etiqueta Eco: Los siguientes en el escalón de eficiencia, se trata en su mayoría de vehículos híbridos, gas o ambos. Tendrán derecho a esta etiqueta eléctricos enchufables con autonomía inferior a 40 km, híbridos no enchufables (HEV), vehículos propulsados por gas natural y gas (GNC y GNL) o gas licuado del petróleo (GLP). Deben cumplir los criterios de la etiqueta C.</shacl:description>
+        <shacl:name xml:lang="es">E C O</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:not rdf:resource="https://astrea.linkeddata.es/shapes#d1ed5a08d4cc1cebbe8847f25969a852"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#c99ed02259db0adcda741b1212186094"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#8f75b8dc894e5c740382370fda5f04ac"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#ECO"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#fdc60d1debb9b35cd78005626d37fcaf -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#fdc60d1debb9b35cd78005626d37fcaf">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Fecha de venta</rdfs:label>
+        <rdfs:label xml:lang="es">Fecha en la que se realizó la venta del vehículo</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <shacl:description xml:lang="es">Fecha en la que se realizó la venta del vehículo</shacl:description>
+        <shacl:name xml:lang="es">Fecha de venta</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#FechaDeVenta"/>
+        <shacl:pattern>-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#fddcc18af6645df13772740c33c01cc1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#fddcc18af6645df13772740c33c01cc1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Caja De Cambios</rdfs:label>
+        <shacl:description xml:lang="es">En los vehículos, la caja de cambios o caja de velocidades (también llamada simplemente caja) es el elemento encargado de obtener en las ruedas el par motor, suficiente para poner en movimiento el vehículo parado, y una vez en marcha obtener un par suficiente en ellas para vencer las resistencias al avance, fundamentalmente las derivadas del perfil aerodinámico, de rozamiento con la rodadura y de pendiente en ascenso.</shacl:description>
+        <shacl:name xml:lang="es">Caja De Cambios</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#baa16a2c0c05031f0b6594d91a4f6fa5"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#4ca46932e81e564851809ed29dc97640"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#CajaDeCambios"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ff1983cd3a7e8019f72b16dbea59a63d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ff1983cd3a7e8019f72b16dbea59a63d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/ontology/"/>
+        <rdfs:label xml:lang="en">Capital Of Region</rdfs:label>
+        <rdfs:label xml:lang="es">Capital de Región</rdfs:label>
+        <shacl:description xml:lang="es">La mayoría de comunidades autónomas tienen una capital establecida, siendo esta la ciudad con mas densidad poblacional</shacl:description>
+        <shacl:name xml:lang="en">Capital Of Region</shacl:name>
+        <shacl:name xml:lang="es">Capital de Región</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://dbpedia.org/ontology/CapitalOfRegion"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#0b51e33878b1984333a0d15a032fb93b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#0b51e33878b1984333a0d15a032fb93b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#EmisionesWLTP"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#0c11f9c889ca88ba01d0ff74570519cc -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#0c11f9c889ca88ba01d0ff74570519cc">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Motor Electrico</rdfs:label>
+        <shacl:description xml:lang="es">Los motores eléctricos usan corriente alterna (AC) o corriente continua (DC) para activar los campos magnéticos del estátor y rotor, produciendo el movimiento de giro del eje del rotor para transmitir el movimiento mecánico y potencia al eje de tracción delantero y trasero.</shacl:description>
+        <shacl:name xml:lang="es">Motor Electrico</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#f33fd3bcc7e2a98647d6fb733728bb00"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#42bd836605e2d7f9c191b24acd931bfb"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#MotorElectrico"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#0d7877cb42905a2d7a78be686b315f41 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#0d7877cb42905a2d7a78be686b315f41">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#SeguroDeCoche"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://dbpedia.org/ontology/owns"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#0f71a2769a3b622f72e13ce33fa79e88 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#0f71a2769a3b622f72e13ce33fa79e88">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Acelera0a100"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#016fca42b1af50f354517a866f0c426c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#016fca42b1af50f354517a866f0c426c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Concesionario</rdfs:label>
+        <shacl:description xml:lang="es">Un concesionario o concesionaria es un comercio minorista que vende automóviles nuevos o de segunda mano. En la mayoría de los casos, los concesionarios son empresas independientes, autorizadas por las marcas fabricantes a vender sus vehículos por medio de un contrato de concesión. Para operar, los concesionarios emplean vendedores especializados y disponen de un salón de ventas para exhibir sus productos al público. Muchos desarrollan también actividades periféricas a la venta de autos, como revisión y mantenimiento mecánico, venta de repuestos, ejecución de garantías y gestiones de matrícula.</shacl:description>
+        <shacl:name xml:lang="es">Concesionario</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#b84a70b58dccb36a724a460a56b29262"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#fdc60d1debb9b35cd78005626d37fcaf"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#123a7c5baefc0450a207fc034be6055e"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#18290533bafe8f06d9ee0bd03db4936f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#393d5f13374adfd0b715fb96cc2c8252"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#52b4745de0b23b9ffb5d8b8b7eb92da6"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#8999b6a0124189da08fd97acef25da28"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#Concesionario"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#02544b52a2933dac651da7540d9f0f2e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#02544b52a2933dac651da7540d9f0f2e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Pertenece a</rdfs:label>
+        <rdfs:label xml:lang="en">belongsTo</rdfs:label>
+        <rdfs:label>Defines a hierarchy from more generic taxa, to more specific ones</rdfs:label>
+        <shacl:description>Defines a hierarchy from more generic taxa, to more specific ones</shacl:description>
+        <shacl:name xml:lang="es">Pertenece a</shacl:name>
+        <shacl:name xml:lang="en">belongsTo</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:or>
+            <rdf:Description/>
+        </shacl:or>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#049d7741133d3ec507e4cb95f521f977 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#049d7741133d3ec507e4cb95f521f977">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/timebank"/>
+        <rdfs:label xml:lang="es">Electricidad</rdfs:label>
+        <rdfs:label xml:lang="en">Electricity</rdfs:label>
+        <shacl:description xml:lang="en">Electric outlet available.</shacl:description>
+        <shacl:description xml:lang="es">Flujo de electrones que circula por un conductor en un determinado momento. Se mide en amperios.</shacl:description>
+        <shacl:name xml:lang="es">Electricidad</shacl:name>
+        <shacl:name xml:lang="en">Electricity</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/timebank#Electricity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#08ca7328df79615216b7f5ac7de46fac -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#08ca7328df79615216b7f5ac7de46fac">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#Rueda"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneRuedas"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#123a7c5baefc0450a207fc034be6055e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#123a7c5baefc0450a207fc034be6055e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Está localizado en</rdfs:label>
+        <rdfs:label xml:lang="es">Posición o punto geográfico en el que se encuentra un determinado lugar, comercio u objeto</rdfs:label>
+        <rdfs:label xml:lang="en">is located at</rdfs:label>
+        <shacl:class rdf:resource="http://dbpedia.org/ontology/City"/>
+        <shacl:description xml:lang="es">Posición o punto geográfico en el que se encuentra un determinado lugar, comercio u objeto</shacl:description>
+        <shacl:name xml:lang="es">Está localizado en</shacl:name>
+        <shacl:name xml:lang="en">is located at</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://www.owl-ontologies.com/dco#isLocatedAt"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#135c9d1ee783186cdfec4b6d5639cca1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#135c9d1ee783186cdfec4b6d5639cca1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneCapacidadMaletero"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#150263bfcbd5ea461e9053e77c24710b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#150263bfcbd5ea461e9053e77c24710b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Diésel</rdfs:label>
+        <rdfs:label xml:lang="es">Gasóleo</rdfs:label>
+        <shacl:description xml:lang="es">El diésel (también conocido como gasóleo, gasoil, dísel o ACPM, siglas de «Aceite Combustible Para Motores») es un hidrocarburo líquido de densidad sobre 850 kg (1874 libras)/m³ o 0.85 g/cm³ a 15 °C (59 °F), compuesto fundamentalmente por parafinas y utilizado principalmente como combustible en calefacción y en motores diésel.4​5​ Su poder calorífico inferior es de 35,86 MJ (10,0 kWh)/L o 43,1 MJ (12,0 kWh)/kg,​ que depende de su composición.</shacl:description>
+        <shacl:name xml:lang="es">Diésel</shacl:name>
+        <shacl:name xml:lang="es">Gasóleo</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#Diesel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1630c0ce0649c0ea5a6b705b63949909 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1630c0ce0649c0ea5a6b705b63949909">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>http://schema.org/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Car</rdfs:label>
+        <rdfs:label xml:lang="es">Coche</rdfs:label>
+        <shacl:description xml:lang="es">El cochel (también conocido como auto, coche o carro en algunos países hispanoamericanos) es un vehículo motorizado con ruedas utilizado para el transporte. Está compuesto por diversas partes, como motor, chasis, tipo de carrocería y sistemas de dirección, frenos y suspensión. La mayoría de las definiciones de automóvil hacen referencia a los vehículos que circulan principalmente por las carreteras, con capacidad de una a ocho personas. Cuentan con cuatro neumáticos y transportan principalmente a personas, antes que mercancías.</shacl:description>
+        <shacl:name xml:lang="en">Car</shacl:name>
+        <shacl:name xml:lang="es">Coche</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://purl.org/holy/ns#Car"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#18290533bafe8f06d9ee0bd03db4936f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#18290533bafe8f06d9ee0bd03db4936f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Relación entre el número de teléfono de una persona o entidad y la propia persona o entidad</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene numero</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#TelephoneNumber"/>
+        <shacl:description xml:lang="es">Relación entre el número de teléfono de una persona o entidad y la propia persona o entidad</shacl:description>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:name xml:lang="es">Tiene numero</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneNumero"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#19c3979c82518587482159f1b338fd37 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#19c3979c82518587482159f1b338fd37">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Los segmentos de coches son clasificaciones utilizadas por la industria automovilística para agrupar vehículos según características como tamaño, capacidad, precio y tipo de motor.</rdfs:label>
+        <rdfs:label xml:lang="es">Pertenece a segmento</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description xml:lang="es">Los segmentos de coches son clasificaciones utilizadas por la industria automovilística para agrupar vehículos según características como tamaño, capacidad, precio y tipo de motor.</shacl:description>
+        <shacl:name xml:lang="es">Pertenece a segmento</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#PerteneceASegmento"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2ab68592bab4143906837cb5f328153b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2ab68592bab4143906837cb5f328153b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#PerteneceASegmento"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2b74ad3fe6b81b34269a7baf0235214c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2b74ad3fe6b81b34269a7baf0235214c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Tracción Trasera</rdfs:label>
+        <shacl:description xml:lang="es">La tracción trasera o propulsión trasera​ (abreviada como &quot;RWD&quot; por sus siglas en inglés) es el sistema en el que la transmisión del movimiento del motor de un vehículo se realiza sobre el eje trasero.</shacl:description>
+        <shacl:name xml:lang="es">Tracción Trasera</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#TraccionTrasera"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2ce2bb9db90d976c3a82bec337ea8b87 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2ce2bb9db90d976c3a82bec337ea8b87">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TienePaginaWeb"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2d7c689b10b6dc8751bd23ba13c7071f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2d7c689b10b6dc8751bd23ba13c7071f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Medida del coche considerada verticalmente desde su punto más elevado hasta su base.</rdfs:label>
+        <rdfs:label xml:lang="es">tiene altura</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">Medida del coche considerada verticalmente desde su punto más elevado hasta su base.</shacl:description>
+        <shacl:name xml:lang="es">tiene altura</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAltura"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2fe9cca6147865825312d35b909cb2f5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2fe9cca6147865825312d35b909cb2f5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Modelo Vendido</rdfs:label>
+        <shacl:description xml:lang="es">Un Modelo Vendido se refiere a un vehículo automotor que ha sido comercializado y transferido por una entidad concesionaria, actuando como intermediaria, a un cliente final que lo adquiere para uso personal o privado. Este concepto implica la existencia de una transacción formal, incluyendo un contrato de compraventa, y la entrega del coche al comprador, quien se convierte en su propietario registrado.</shacl:description>
+        <shacl:name xml:lang="es">Modelo Vendido</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:not rdf:resource="https://astrea.linkeddata.es/shapes#d326d1fc2b972808ee9f01d895dd1594"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#be2e29c0f13378b9a59f984e057897b3"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#c05d91935cc8968cbf14f08248754db4"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#cdce52ed40e44eabaf2ec1dbbb5db30e"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#d9f3428649337fe7604fb87591e48f5f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#de51e621aa64ec0301642646d0a30be2"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#ed513e6121412b8537bc87f5235790f4"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#f20d0f0c5452af0499bcfc7953cdd206"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#f2776bdf2a5219f4fe2b62dd26700694"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#0f71a2769a3b622f72e13ce33fa79e88"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#08ca7328df79615216b7f5ac7de46fac"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#135c9d1ee783186cdfec4b6d5639cca1"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#19c3979c82518587482159f1b338fd37"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2ab68592bab4143906837cb5f328153b"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2d7c689b10b6dc8751bd23ba13c7071f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2003e4c7b1aa91ee4eb089d90eebad29"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#217ed1e3080c14af3f7be078912a4059"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2501e741a39dbbf99710a9dd548f266b"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#26817e60efff8cdcab1d3f44c22bef28"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#28f1db34fd6cf97abb86eaa1fb68ed54"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#3147b59c39a3cec6019dd33ac88ae6b3"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#3734de00c91b758f19ec3417318e7603"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#4c47733628aa926274d6770d25fe8136"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#4e5748b2f21b07017c66c4cb0ebed852"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#4fb6c3953fcfe4de82cb7b98e97b7084"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#5d8c6a7f3ae072ae57b4c879aadc4ecb"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#5e4d136f87a35ec4aa2286faa66c843a"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#5f5136e66496a52ae48cd6787354da8c"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6ad3a7ebc6ac46c9c264e6d010c1985a"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6b57fa5410492eca093c82d82f7a673a"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6d6848b2dd9bfff41e75031414e908de"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#635e0b61d2b6ff5adc9e6134801523f5"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6618c1d985f4a5f244ebde062cb55f56"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#7deb0ea43eac75dd6764547d416fa443"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#8a05dcf2a5a6be3a5afe2d6a48a69ca1"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#8b83e0982e1c4385fb7feffc4a573ae8"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#8289c393bbca0eb0f4fc392e7acaddf6"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#20f36731f64b26237536974231e0706a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#20f36731f64b26237536974231e0706a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Comprador</rdfs:label>
+        <shacl:description xml:lang="es">Persona que compra un coche.</shacl:description>
+        <shacl:name xml:lang="es">Comprador</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#0d7877cb42905a2d7a78be686b315f41"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#18290533bafe8f06d9ee0bd03db4936f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#35bb7bb44dc14d491b9ab7cae8b7ef50"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#5a397c28dd357106468bb458e6886b7e"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#90d0d4e016f91c393c7cdd73fcb1f008"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#Comprador"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2003e4c7b1aa91ee4eb089d90eebad29 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2003e4c7b1aa91ee4eb089d90eebad29">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneLongitud"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#209ae110e1bf6bed8442b1bc4f670799 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#209ae110e1bf6bed8442b1bc4f670799">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#RecargaElectrica"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#217ed1e3080c14af3f7be078912a4059 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#217ed1e3080c14af3f7be078912a4059">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TienePlazas"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2501e741a39dbbf99710a9dd548f266b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2501e741a39dbbf99710a9dd548f266b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAnchura"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#26817e60efff8cdcab1d3f44c22bef28 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#26817e60efff8cdcab1d3f44c22bef28">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#DispositivoAmbiental"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneDA"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#271d430f184d68c9969e857c5cfbbcf2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#271d430f184d68c9969e857c5cfbbcf2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Tiene valor</rdfs:label>
+        <rdfs:label xml:lang="es">Valor de una propiedad expresado como un literal RDF. Tenga en cuenta que, aunque se esperen valores decimales, los valores podrían utilizar otros tipos de datos.</rdfs:label>
+        <rdfs:label xml:lang="en">Value of a property value expressed as an RDF literal. Note that, even if decimal values are expected, values could use other datatypes.</rdfs:label>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Valor de una propiedad expresado como un literal RDF. Tenga en cuenta que, aunque se esperen valores decimales, los valores podrían utilizar otros tipos de datos.</shacl:description>
+        <shacl:description xml:lang="en">Value of a property value expressed as an RDF literal. Note that, even if decimal values are expected, values could use other datatypes.</shacl:description>
+        <shacl:name xml:lang="es">Tiene valor</shacl:name>
+        <shacl:name xml:lang="en">has value</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://www.owl-ontologies.com/saref#hasValue"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#28f1db34fd6cf97abb86eaa1fb68ed54 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#28f1db34fd6cf97abb86eaa1fb68ed54">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://www.owl-ontologies.com/s4envi#hasColor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#31ca8c8cd0557f6d5aebab617535acc2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#31ca8c8cd0557f6d5aebab617535acc2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Cambio Automatico</rdfs:label>
+        <shacl:description xml:lang="es">Una transmisión automática o caja automática es una caja de cambios de automóviles u otro tipo de vehículos que puede encargarse por sí misma de cambiar la relación de cambio automáticamente a medida que el vehículo se mueve, liberando así al conductor de la tarea de cambiar de marcha manualmente.</shacl:description>
+        <shacl:name xml:lang="es">Cambio Automatico</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:not rdf:resource="https://astrea.linkeddata.es/shapes#e1c0468aec43f304b301eb7768ffadf4"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#CambioAutomatico"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#31284a39e4a1035d23a916dec814a034 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#31284a39e4a1035d23a916dec814a034">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Traccion4x4</rdfs:label>
+        <rdfs:label xml:lang="es">Tracción a las cuatro ruedas</rdfs:label>
+        <rdfs:label xml:lang="es">Tracción integral</rdfs:label>
+        <shacl:description xml:lang="es">La tracción en las cuatro ruedas, doble tracción, tracción integral o tracción total son expresiones comúnmente usadas para referirse a vehículos de turismo, todocamino y todoterreno de dos ejes. Generalmente abreviada como 4×4, o 4WD (4 Wheel Drive) y AWD (All Wheel Drive) en los países anglosajones, es un sistema de transmisión en un automóvil en el que ambos ejes pueden recibir simultáneamente la potencia del motor.​ La mayoría de los automóviles todoterreno y camionetas tienen tracción en las cuatro ruedas, y también algunos turismos y deportivos de alta gama</shacl:description>
+        <shacl:name xml:lang="es">Traccion4x4</shacl:name>
+        <shacl:name xml:lang="es">Tracción a las cuatro ruedas</shacl:name>
+        <shacl:name xml:lang="es">Tracción integral</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#Traccion4x4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3147b59c39a3cec6019dd33ac88ae6b3 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3147b59c39a3cec6019dd33ac88ae6b3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Combustible consumido cada 100 Km</rdfs:label>
+        <rdfs:label xml:lang="es">Combustible consumido por el vehículo en 100 Km</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">Combustible consumido por el vehículo en 100 Km</shacl:description>
+        <shacl:name xml:lang="es">Combustible consumido cada 100 Km</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#CombustibleCada100"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#35bb7bb44dc14d491b9ab7cae8b7ef50 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#35bb7bb44dc14d491b9ab7cae8b7ef50">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Nombre del comprador</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene nombre</rdfs:label>
+        <rdfs:label xml:lang="en">has name</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description xml:lang="es">Nombre del comprador</shacl:description>
+        <shacl:name xml:lang="es">Tiene nombre</shacl:name>
+        <shacl:name xml:lang="en">has name</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#hasName"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#35031e8e5d03bd81437c02d68f0484dc -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#35031e8e5d03bd81437c02d68f0484dc">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneParMaximo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#37ef0a1d68c87805cade9f4f61061b84 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#37ef0a1d68c87805cade9f4f61061b84">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#PermiteAparcarGratis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3734de00c91b758f19ec3417318e7603 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3734de00c91b758f19ec3417318e7603">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Máximo cantidad de espacio por unidad de tiempo capaz de ser recorrida por el vehículo</rdfs:label>
+        <rdfs:label xml:lang="es">tiene velocidad maxima</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Máximo cantidad de espacio por unidad de tiempo capaz de ser recorrida por el vehículo</shacl:description>
+        <shacl:name xml:lang="es">tiene velocidad maxima</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneVelocidadMaxima"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#393d5f13374adfd0b715fb96cc2c8252 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#393d5f13374adfd0b715fb96cc2c8252">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#RealizoVenta"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4b2a9facb6a61aa926e2e8b05c5d73e9 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4b2a9facb6a61aa926e2e8b05c5d73e9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Tracción Delantera</rdfs:label>
+        <rdfs:label>Traccion Frontal</rdfs:label>
+        <shacl:description xml:lang="es">La tracción delantera (abreviada como FWD por sus siglas en inglés; en idiomas como el francés se utiliza simplemente la palabra &quot;traction&quot; para referirse a que la impulsión se halla en el eje delantero, y &quot;propulsión&quot; para denominar a la tracción trasera) es el sistema en el que el par motor se transmite solo al eje delantero. Es el mismo eje en el cual se suele encontrar la dirección del vehículo. La mayoría de los vehículos de tracción delantera incorporan el diferencial en la estructura de la caja de cambios.</shacl:description>
+        <shacl:name xml:lang="es">Tracción Delantera</shacl:name>
+        <shacl:name>Traccion Frontal</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#TraccionFrontal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4c47733628aa926274d6770d25fe8136 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4c47733628aa926274d6770d25fe8136">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Medida del coche considerada horizontalmente desde un lado al otro.</rdfs:label>
+        <rdfs:label xml:lang="es">tiene anchura</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">Medida del coche considerada horizontalmente desde un lado al otro.</shacl:description>
+        <shacl:name xml:lang="es">tiene anchura</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAnchura"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4ca46932e81e564851809ed29dc97640 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4ca46932e81e564851809ed29dc97640">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#Marchas"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4e5748b2f21b07017c66c4cb0ebed852 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4e5748b2f21b07017c66c4cb0ebed852">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#CombustibleCada100"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4edb44461c632f8fc2c26050f1d8d2b5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4edb44461c632f8fc2c26050f1d8d2b5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Motor Térmico</rdfs:label>
+        <shacl:description xml:lang="es">Un motor térmico es un tipo de propulsor que convierte la energía térmica liberada por la combustión en energía mecánica. Estos motores utilizan la combustión de un combustible, como gasolina, diésel o gas natural, para generar calor y producir movimiento. Existen diferentes tipos de motores térmicos, incluidos los de combustión interna y los motores de combustión externa.</shacl:description>
+        <shacl:name xml:lang="es">Motor Térmico</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#c1655ce66b1dd49c3da7e0cb7b3c4659"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#d6137ba9df11cfebcb5c1c9cab792200"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#MotorTermico"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4fb6c3953fcfe4de82cb7b98e97b7084 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4fb6c3953fcfe4de82cb7b98e97b7084">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAutonomiaTotal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4164774f56fa2eb672412e939f34b4e6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4164774f56fa2eb672412e939f34b4e6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">C</rdfs:label>
+        <shacl:description xml:lang="es">Etiqueta C: Vehículos de combustión interna que cumplen con las últimas emisiones EURO. Tendrán derecho a esta etiqueta turismos y furgonetas ligeras de gasolina matriculadas a partir de enero de 2006 y diésel a partir de septiembre de 2015. Vehículos de más de 8 plazas, excluido el conductor, y pesados tanto de gasolina como diésel, matriculados desde 2014.</shacl:description>
+        <shacl:name xml:lang="es">C</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:not rdf:resource="https://astrea.linkeddata.es/shapes#d1ed5a08d4cc1cebbe8847f25969a852"/>
+        <shacl:not rdf:resource="https://astrea.linkeddata.es/shapes#4236e1f9b7e84895948736c7bc782663"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#C"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#42bd836605e2d7f9c191b24acd931bfb -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#42bd836605e2d7f9c191b24acd931bfb">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Cantidad de carga que pasa por la sección transversal de un conductor eléctrico en un segundo, cuando la corriente eléctrica es de un amperio.</rdfs:label>
+        <rdfs:label xml:lang="es">recarga electrica</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">Cantidad de carga que pasa por la sección transversal de un conductor eléctrico en un segundo, cuando la corriente eléctrica es de un amperio.</shacl:description>
+        <shacl:name xml:lang="es">recarga electrica</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#RecargaElectrica"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#42d79825cd5159f94cfe50a32ee1805c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#42d79825cd5159f94cfe50a32ee1805c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAltura"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4236e1f9b7e84895948736c7bc782663 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4236e1f9b7e84895948736c7bc782663">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#ECO"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#447dfc236218ac479dc67153554244f5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#447dfc236218ac479dc67153554244f5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Marca Superior</rdfs:label>
+        <shacl:description xml:lang="es">Una marca superior se refiere al grupo que contiene al fabricante o compañía que fabrica el vehículo. Por ejemplo PSA o FCA.</shacl:description>
+        <shacl:name xml:lang="es">Marca Superior</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2ce2bb9db90d976c3a82bec337ea8b87"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#7c1abdd73898185b69a0e7ca02f1edce"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#MarcaSuperior"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#49cfe32fb4506ae564bb275365fdc840 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#49cfe32fb4506ae564bb275365fdc840">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/ontology/"/>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:label xml:lang="es">Ciudad</rdfs:label>
+        <shacl:description xml:lang="es">Una ciudad es un asentamiento de población humana con atribuciones y funciones políticas, administrativas, económicas y religiosas, a diferencia de los núcleos rurales que carecen de ellas, total o parcialmente. Esto tiene su reflejo material en la presencia de edificios específicos y en su configuración urbanística.1</shacl:description>
+        <shacl:name xml:lang="en">City</shacl:name>
+        <shacl:name xml:lang="es">Ciudad</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://dbpedia.org/ontology/City"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5a397c28dd357106468bb458e6886b7e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5a397c28dd357106468bb458e6886b7e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#TelephoneNumber"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneNumero"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5a84d0453710416b99bb46f6314eb69d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5a84d0453710416b99bb46f6314eb69d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Dispositivo de conversión energética</rdfs:label>
+        <rdfs:label xml:lang="en">Energy conversion device</rdfs:label>
+        <shacl:description xml:lang="es">El dispositivo de conversión energética define la aparición de un dispositivo utilizado para realizar la conversión de energía o la transferencia de calor y que normalmente participa en un sistema de distribución de flujo.</shacl:description>
+        <shacl:description xml:lang="en">The distribution flow element EnergyConversionDevice defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system.</shacl:description>
+        <shacl:name xml:lang="es">Dispositivo de conversión energética</shacl:name>
+        <shacl:name xml:lang="en">Energy conversion device</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://saref.etsi.org/saref4bldg/EnergyConversionDevice"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5d8c6a7f3ae072ae57b4c879aadc4ecb -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5d8c6a7f3ae072ae57b4c879aadc4ecb">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Relación entre las ruedas de un coche y el propio coche</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene ruedas</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#Rueda"/>
+        <shacl:description xml:lang="es">Relación entre las ruedas de un coche y el propio coche</shacl:description>
+        <shacl:name xml:lang="es">Tiene ruedas</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneRuedas"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5e4d136f87a35ec4aa2286faa66c843a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5e4d136f87a35ec4aa2286faa66c843a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#MarcaInferior"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5f070ab8919a9cd11006ea91181385e7 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5f070ab8919a9cd11006ea91181385e7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Rueda</rdfs:label>
+        <shacl:description xml:lang="es">La rueda es una pieza circular que es fundamental en diferentes aspectos de la vida humana, especialmente en la ducha de los vehículos automóviles. Esencialmente, la rueda es un dispositivo que facilita el movimiento al reducir la fricción entre un cuerpo y la superficie sobre la que se sitúa.</shacl:description>
+        <shacl:name xml:lang="es">Rueda</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#a93bd2fdbc1fb7825a90b9e4581ec904"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2d7c689b10b6dc8751bd23ba13c7071f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#4c47733628aa926274d6770d25fe8136"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#42d79825cd5159f94cfe50a32ee1805c"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6ad3a7ebc6ac46c9c264e6d010c1985a"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#63874b90371bd527968e7ffd98a6a881"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#Rueda"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5f5136e66496a52ae48cd6787354da8c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5f5136e66496a52ae48cd6787354da8c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneVelocidadMaxima"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#52ac464ff7ec13498da2abbf42cd3355 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#52ac464ff7ec13498da2abbf42cd3355">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Combustible fósil</rdfs:label>
+        <rdfs:label xml:lang="en">Fossil Fuel</rdfs:label>
+        <shacl:description xml:lang="en">The subclass &quot;FossilFuel&quot; could be expanded to focus the domain scope to the creation of hydrogen concerning the value chain.</shacl:description>
+        <shacl:description xml:lang="es">Un combustible fósil es aquel que procede de la biomasa producida en eras pasadas, que ha sufrido enterramiento y tras él, procesos de transformación, por aumento de presión y temperatura, hasta la formación de sustancias de gran contenido energético, como el carbón, el petróleo, o el gas natural. Al no ser energía renovable, no se considera como energía de la biomasa, aunque su origen sea orgánico o de biomasa.1​</shacl:description>
+        <shacl:name xml:lang="es">Combustible fósil</shacl:name>
+        <shacl:name xml:lang="en">Fossil Fuel</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://purl.org/holy/ns#FossilFuel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#52b4745de0b23b9ffb5d8b8b7eb92da6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#52b4745de0b23b9ffb5d8b8b7eb92da6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://dbpedia.org/ontology/City"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://www.owl-ontologies.com/dco#isLocatedAt"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#539ccf30016e44e827e127382c81b48d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#539ccf30016e44e827e127382c81b48d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Gasolina</rdfs:label>
+        <shacl:description xml:lang="es">La gasolina1 (también conocida como gasoleno; nafta en Argentina, Paraguay, Uruguay; bencina en Chile; o gasolín) es un producto, derivado del petróleo por destilación, que se utiliza principalmente como combustible en la mayoría de motores de combustión interna de encendido por chispa, así como en estufas y lámparas y para limpieza con disolventes, entre otras aplicaciones.</shacl:description>
+        <shacl:name xml:lang="es">Gasolina</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#Gasolina"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6ad3a7ebc6ac46c9c264e6d010c1985a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6ad3a7ebc6ac46c9c264e6d010c1985a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Medida que expresa la distancia entre dos puntos</rdfs:label>
+        <rdfs:label xml:lang="es">tiene longitud</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">Medida que expresa la distancia entre dos puntos</shacl:description>
+        <shacl:name xml:lang="es">tiene longitud</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneLongitud"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6b57fa5410492eca093c82d82f7a673a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6b57fa5410492eca093c82d82f7a673a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Gama en la que se sitúa un coche debido a su precio de venta al público</rdfs:label>
+        <rdfs:label xml:lang="es">Pertenece a gama</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description xml:lang="es">Gama en la que se sitúa un coche debido a su precio de venta al público</shacl:description>
+        <shacl:name xml:lang="es">Pertenece a gama</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#PerteneceAGama"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6d6848b2dd9bfff41e75031414e908de -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6d6848b2dd9bfff41e75031414e908de">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#MotorDeCoche"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneMotor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#635e0b61d2b6ff5adc9e6134801523f5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#635e0b61d2b6ff5adc9e6134801523f5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Es propiedad de</rdfs:label>
+        <rdfs:label xml:lang="en">Is owned by</rdfs:label>
+        <rdfs:label xml:lang="es">Relación de pertenencia que tiene un objeto con una persona o lugar</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#Comprador"/>
+        <shacl:description xml:lang="es">Relación de pertenencia que tiene un objeto con una persona o lugar</shacl:description>
+        <shacl:name xml:lang="es">Es propiedad de</shacl:name>
+        <shacl:name xml:lang="en">Is owned by</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#IsOwnedBy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#63874b90371bd527968e7ffd98a6a881 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#63874b90371bd527968e7ffd98a6a881">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneLongitud"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6421dadc0a4466fe9ddec7f881f9c5ee -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6421dadc0a4466fe9ddec7f881f9c5ee">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://schema.org/price"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6618c1d985f4a5f244ebde062cb55f56 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6618c1d985f4a5f244ebde062cb55f56">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Relación entre la caja de cambios y el ccohe que la posee</rdfs:label>
+        <rdfs:label xml:lang="es">tiene cambio</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#CajaDeCambios"/>
+        <shacl:description xml:lang="es">Relación entre la caja de cambios y el ccohe que la posee</shacl:description>
+        <shacl:name xml:lang="es">tiene cambio</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneCambio"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7c1abdd73898185b69a0e7ca02f1edce -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7c1abdd73898185b69a0e7ca02f1edce">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">URL a la página web de referencia</rdfs:label>
+        <rdfs:label xml:lang="es">tiene pagina web</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <shacl:description xml:lang="es">URL a la página web de referencia</shacl:description>
+        <shacl:name xml:lang="es">tiene pagina web</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TienePaginaWeb"/>
+        <shacl:pattern>^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7c46d94d881c993e38d603c22a09323b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7c46d94d881c993e38d603c22a09323b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Motor De Coche</rdfs:label>
+        <shacl:description xml:lang="es">El motor de coche transforma la energía de combustión interna, la eléctrica o la combinación de ambas en energía que permite generar un continuo impulso mecánico cuya fuerza hace girar las ruedas para que el coche pueda desplazarse.</shacl:description>
+        <shacl:name xml:lang="es">Motor De Coche</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#a40d7b370032a23fe58ee46d668b3502"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#a88996737292dcb516d6686bcfac6245"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#bebe7c2eebf3b7197efa01547361bcd3"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#c117d1a9600f5bbc419b4fe7211dd886"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#35031e8e5d03bd81437c02d68f0484dc"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#84df2f20929508705f01cc1ff674a756"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#MotorDeCoche"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7dbacc8d3e3c5ec332fa805af5608e7a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7dbacc8d3e3c5ec332fa805af5608e7a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TienePaginaWeb"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7dcba1f80f8277b42dc3bd419322de98 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7dcba1f80f8277b42dc3bd419322de98">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://example.org/stelldj#MarcaSuperior"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7deb0ea43eac75dd6764547d416fa443 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7deb0ea43eac75dd6764547d416fa443">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="en">A relation between a light emitted and its color.</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene color</rdfs:label>
+        <rdfs:label xml:lang="es">Una relación entre la luz emitida y su color.</rdfs:label>
+        <rdfs:label xml:lang="en">has color</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description xml:lang="en">A relation between a light emitted and its color.</shacl:description>
+        <shacl:description xml:lang="es">Una relación entre la luz emitida y su color.</shacl:description>
+        <shacl:name xml:lang="es">Tiene color</shacl:name>
+        <shacl:name xml:lang="en">has color</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://www.owl-ontologies.com/s4envi#hasColor"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7f6dd1ade0b05464e30faf3f5fe34c75 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7f6dd1ade0b05464e30faf3f5fe34c75">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://www.owl-ontologies.com/saref#hasValue"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#71fab9ca99ca2d338b3f58c1b53c9b51 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#71fab9ca99ca2d338b3f58c1b53c9b51">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="it">Assicurazione</rdfs:label>
+        <rdfs:label xml:lang="en">Insurance</rdfs:label>
+        <rdfs:label xml:lang="es">Seguro</rdfs:label>
+        <shacl:description xml:lang="it">Le istanze di questa classe rappresentano, tra tutte le attività d&apos;impresa, talune attività di assicurazioni, agenti, sub-agenti, broker e altri intermediari, anche ai fini dell&apos;apertura di fondi pensione e di assicurazioni sulla vita.</shacl:description>
+        <shacl:description xml:lang="en">The instances of this class include, among all business activities, certain insurance, agents, sub agents, brokers and other intermediaries, including for the purpose of opening pension funds and life insurance.</shacl:description>
+        <shacl:description xml:lang="es">Un seguro o aseguración1​es un contrato, denominado póliza de seguro, por el que una Compañía de Seguros (el asegurador) se compromete, mediante el cobro de una prima y para el caso de que se produzca el evento cuyo riesgo es objeto de cobertura a indemnizar, dentro de los límites pactados, el daño producido al asegurado; bien a través de un capital, una renta, o a través de la prestación de un servicio. En este contrato intervienen: el asegurador, que siempre ha de ser una compañía de seguros, que es la entidad responsable de la cobertura en caso de siniestro; el asegurado, propietario de la póliza de seguro y responsable del pago de la prima correspondiente; y el beneficiario, que es la persona que cobrará la indemnización correspondiente en caso de siniestro. No siempre estas tres figuras han de ser la misma persona pudiendo ser todos distintos.</shacl:description>
+        <shacl:name xml:lang="it">Assicurazione</shacl:name>
+        <shacl:name xml:lang="en">Insurance</shacl:name>
+        <shacl:name xml:lang="es">Seguro</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.disit.org/km4city/schema#Insurance"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#79082567ac9efbf0eabb122efa2036ea -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#79082567ac9efbf0eabb122efa2036ea">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Dispositivo Ambiental</rdfs:label>
+        <shacl:description xml:lang="es">El distintivo o dispositivo ambiental es una manera de clasificar los vehículos en función de su eficiencia energética, teniendo en cuenta el impacto medioambiental de los mismos.</shacl:description>
+        <shacl:name xml:lang="es">Dispositivo Ambiental</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#dbdcc0da19153e16c7656fd96b77f6bf"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#eacef954066e0327cff8d7570d83358d"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#0b51e33878b1984333a0d15a032fb93b"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#7c1abdd73898185b69a0e7ca02f1edce"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#DispositivoAmbiental"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8a05dcf2a5a6be3a5afe2d6a48a69ca1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8a05dcf2a5a6be3a5afe2d6a48a69ca1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Número de asientos del vehículo</rdfs:label>
+        <rdfs:label xml:lang="es">tiene plazas</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Número de asientos del vehículo</shacl:description>
+        <shacl:name xml:lang="es">tiene plazas</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TienePlazas"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8b83e0982e1c4385fb7feffc4a573ae8 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8b83e0982e1c4385fb7feffc4a573ae8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Distancia que puede recorrer el vehículo con un depósito completo</rdfs:label>
+        <rdfs:label xml:lang="es">tiene autonomia total</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description xml:lang="es">Distancia que puede recorrer el vehículo con un depósito completo</shacl:description>
+        <shacl:name xml:lang="es">tiene autonomia total</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneAutonomiaTotal"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8e2593526b0d6b43e9a5f8eed9e0e7de -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8e2593526b0d6b43e9a5f8eed9e0e7de">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Cambio Manual</rdfs:label>
+        <shacl:description xml:lang="es">Una transmisión manual o mecánica1​ es una caja de cambios que no puede alterar la relación de cambio por sí sola, requiriendo la intervención del conductor para hacer esto. Por lo tanto, se diferencia de una transmisión automática en que esta última sí puede cambiar de marcha de forma autónoma.</shacl:description>
+        <shacl:name xml:lang="es">Cambio Manual</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#CambioManual"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8e793e250a17384727f7094f53aa65e2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8e793e250a17384727f7094f53aa65e2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">Seguro De Coche</rdfs:label>
+        <shacl:description xml:lang="es">El seguro de coche ayuda a pagar por los daños y lesiones cuando ocurre un accidente de coches.</shacl:description>
+        <shacl:name xml:lang="es">Seguro De Coche</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#e1cc96c1f32e1dc78553bdf9e6bf034f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#ed19da3b729cc9add829452e64f11147"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#edadb627b45219de3073906bef2f736f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#635e0b61d2b6ff5adc9e6134801523f5"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6421dadc0a4466fe9ddec7f881f9c5ee"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#SeguroDeCoche"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8f75b8dc894e5c740382370fda5f04ac -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8f75b8dc894e5c740382370fda5f04ac">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#PermiteAparcarGratis"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8289c393bbca0eb0f4fc392e7acaddf6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8289c393bbca0eb0f4fc392e7acaddf6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Relación entre la tracción de un coche y el coche</rdfs:label>
+        <rdfs:label xml:lang="es">Tiene traccion</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#Traccion"/>
+        <shacl:description xml:lang="es">Relación entre la tracción de un coche y el coche</shacl:description>
+        <shacl:name xml:lang="es">Tiene traccion</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneTraccion"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#84b5202c9d7910b65c0d401394a7dc1c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#84b5202c9d7910b65c0d401394a7dc1c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Combustible utilizado para hacer funcionar un vehículo</rdfs:label>
+        <rdfs:label xml:lang="es">consume combustible</rdfs:label>
+        <shacl:description xml:lang="es">Combustible utilizado para hacer funcionar un vehículo</shacl:description>
+        <shacl:name xml:lang="es">consume combustible</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:or>
+            <rdf:Description/>
+        </shacl:or>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#84df2f20929508705f01cc1ff674a756 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#84df2f20929508705f01cc1ff674a756">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Kilovatios (KV) que tiene de potencia del vehículo, siendo esta la potencia según el Sistema Internacional de Unidades</rdfs:label>
+        <rdfs:label xml:lang="es">tiene KV</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description xml:lang="es">Kilovatios (KV) que tiene de potencia del vehículo, siendo esta la potencia según el Sistema Internacional de Unidades</shacl:description>
+        <shacl:name xml:lang="es">tiene KV</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#TieneKV"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8999b6a0124189da08fd97acef25da28 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8999b6a0124189da08fd97acef25da28">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="es">Realizó venta</rdfs:label>
+        <rdfs:label xml:lang="es">Relación entre persona o entidad y el objeto que fue vendido</rdfs:label>
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:description xml:lang="es">Relación entre persona o entidad y el objeto que fue vendido</shacl:description>
+        <shacl:name xml:lang="es">Realizó venta</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#RealizoVenta"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#90d0d4e016f91c393c7cdd73fcb1f008 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#90d0d4e016f91c393c7cdd73fcb1f008">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#hasName"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9188a44a2a8eb8045759209cb8d43b6a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9188a44a2a8eb8045759209cb8d43b6a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/ontology/"/>
+        <rdfs:label xml:lang="es">Posee</rdfs:label>
+        <rdfs:label xml:lang="en">owns</rdfs:label>
+        <shacl:name xml:lang="es">Posee</shacl:name>
+        <shacl:name xml:lang="en">owns</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+        <shacl:or>
+            <rdf:Description/>
+        </shacl:or>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#953dca644d691bb4d34d39c2b2db7ce4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#953dca644d691bb4d34d39c2b2db7ce4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label xml:lang="es">0</rdfs:label>
+        <shacl:description xml:lang="es">Etiqueta 0 emisiones: Identifica a los vehículos más eficientes. Tendrán derecho a esta etiqueta eléctricos de batería (BEV) , eléctricos de autonomía extendida (REEV), eléctricos híbridos enchufables (PHEV) con una autonomía de 40 km o vehículos de pila de combustible.</shacl:description>
+        <shacl:name xml:lang="es">0</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#c99ed02259db0adcda741b1212186094"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#37ef0a1d68c87805cade9f4f61061b84"/>
+        <shacl:targetClass rdf:resource="http://example.org/stelldj#0"/>
+    </NamedIndividual>
+    <rdf:Description rdf:nodeID="genid5">
+        <shacl:class rdf:resource="http://purl.org/holy/ns#FossilFuel"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#ConsumeCombustible"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <shacl:class rdf:resource="http://example.org/stelldj#MarcaSuperior"/>
+        <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <shacl:class rdf:resource="http://example.org/stelldj#MarcaInferior"/>
+        <shacl:path rdf:resource="https://w3id.org/EUTaxO#belongsTo"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid9">
+        <shacl:class rdf:resource="http://example.org/stelldj#ModeloVendido"/>
+        <shacl:path rdf:resource="http://dbpedia.org/ontology/owns"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <shacl:class rdf:resource="https://w3id.org/timebank#Electricity"/>
+        <shacl:path rdf:resource="http://example.org/stelldj#ConsumeCombustible"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid11">
+        <shacl:class rdf:resource="http://example.org/stelldj#SeguroDeCoche"/>
+        <shacl:path rdf:resource="http://dbpedia.org/ontology/owns"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
