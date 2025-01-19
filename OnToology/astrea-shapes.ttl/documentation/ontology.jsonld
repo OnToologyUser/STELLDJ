@@ -4,23 +4,23 @@
 }, {
   "@id" : "_:genid10",
   "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "http://example.org/stelldj#ModeloVendido"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "http://dbpedia.org/ontology/owns"
-  } ]
-}, {
-  "@id" : "_:genid11",
-  "http://www.w3.org/ns/shacl#class" : [ {
     "@id" : "https://w3id.org/timebank#Electricity"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "http://example.org/stelldj#ConsumeCombustible"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid11",
   "http://www.w3.org/ns/shacl#class" : [ {
     "@id" : "http://example.org/stelldj#ModeloVendido"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://dbpedia.org/ontology/owns"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://example.org/stelldj#MarcaSuperior"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/EUTaxO#belongsTo"
@@ -28,23 +28,23 @@
 }, {
   "@id" : "_:genid6",
   "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "http://purl.org/holy/ns#FossilFuel"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "http://example.org/stelldj#ConsumeCombustible"
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "http://www.w3.org/ns/shacl#class" : [ {
     "@id" : "http://example.org/stelldj#MarcaInferior"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/EUTaxO#belongsTo"
   } ]
 }, {
+  "@id" : "_:genid7",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://purl.org/holy/ns#FossilFuel"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://example.org/stelldj#ConsumeCombustible"
+  } ]
+}, {
   "@id" : "_:genid8",
   "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "http://example.org/stelldj#MarcaSuperior"
+    "@id" : "http://example.org/stelldj#ModeloVendido"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/EUTaxO#belongsTo"
