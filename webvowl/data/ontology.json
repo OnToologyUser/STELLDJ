@@ -1,0 +1,2286 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "it", "es", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://example.org/stelldj", "http://www.w3.org/2001/XMLSchema", "http://dbpedia.org/ontology", "https://saref.etsi.org/saref4bldg", "http://purl.org/holy/ns", "http://www.owl-ontologies.com/saref", "https://w3id.org/EUTaxO", "http://www.w3.org/2000/01/rdf-schema", "http://www.owl-ontologies.com/s4envi", "http://www.disit.org/km4city/schema", "http://www.owl-ontologies.com/dco", "http://xmlns.com/foaf/0.1", "https://w3id.org/timebank" ],
+    "title" : {
+      "undefined" : "StellDJ"
+    },
+    "iri" : "http://example.org/stelldj#",
+    "version" : "0.0.1",
+    "author" : [ "Diego Rosete", "Juan Murillo" ],
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://purl.org/NET/rdflicense/cc-by-nc-sa4.0",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Diego Rosete",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Juan Murillo",
+        "type" : "label"
+      } ],
+      "createdWith" : [ {
+        "identifier" : "createdWith",
+        "language" : "undefined",
+        "value" : "https://chowlk.linkeddata.es/",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "StellDJ",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "30",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "35",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/holy/ns#Car",
+    "baseIri" : "http://purl.org/holy/ns",
+    "instances" : 0,
+    "annotations" : {
+      "hyponym" : [ {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Hybrid Range Extender",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Coupe",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Electric SUV",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Limousine",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Coupé",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Convertible",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Hybrid Vehicle",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Passenger Car",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Station Wagon",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Passenger Vehicle",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Hydrogen SUV",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Electric passenger vehicle",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "SUV",
+        "type" : "label"
+      }, {
+        "identifier" : "hyponym",
+        "language" : "en",
+        "value" : "Jeep",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "label"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "undefined",
+        "value" : "https://dictionary.cambridge.org/dictionary/english/car",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Car",
+      "en" : "Car",
+      "es" : "Coche"
+    },
+    "subClasses" : [ "4" ],
+    "comment" : {
+      "es" : "El cochel (también conocido como auto, coche o carro en algunos países hispanoamericanos) es un vehículo motorizado con ruedas utilizado para el transporte. Está compuesto por diversas partes, como motor, chasis, tipo de carrocería y sistemas de dirección, frenos y suspensión. La mayoría de las definiciones de automóvil hacen referencia a los vehículos que circulan principalmente por las carreteras, con capacidad de una a ocho personas. Cuentan con cuatro neumáticos y transportan principalmente a personas, antes que mercancías."
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://example.org/stelldj#Traccion",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Traccion",
+      "es" : "Tracción de coche"
+    },
+    "subClasses" : [ "10", "11", "12" ],
+    "comment" : {
+      "es" : "Fuerza que permite al automóvil avanzar sin resbalar"
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://example.org/stelldj#ECO",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ECO",
+      "es" : "E C O"
+    },
+    "comment" : {
+      "es" : "Etiqueta Eco: Los siguientes en el escalón de eficiencia, se trata en su mayoría de vehículos híbridos, gas o ambos. Tendrán derecho a esta etiqueta eléctricos enchufables con autonomía inferior a 40 km, híbridos no enchufables (HEV), vehículos propulsados por gas natural y gas (GNC y GNL) o gas licuado del petróleo (GLP). Deben cumplir los criterios de la etiqueta C."
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://example.org/stelldj#MotorElectrico",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MotorElectrico",
+      "es" : "Motor Electrico"
+    },
+    "comment" : {
+      "es" : "Los motores eléctricos usan corriente alterna (AC) o corriente continua (DC) para activar los campos magnéticos del estátor y rotor, produciendo el movimiento de giro del eje del rotor para transmitir el movimiento mecánico y potencia al eje de tracción delantero y trasero."
+    },
+    "id" : "18",
+    "superClasses" : [ "16" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "20", "21" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://example.org/stelldj#MotorTermico",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MotorTermico",
+      "es" : "Motor Térmico"
+    },
+    "comment" : {
+      "es" : "Un motor térmico es un tipo de propulsor que convierte la energía térmica liberada por la combustión en energía mecánica. Estos motores utilizan la combustión de un combustible, como gasolina, diésel o gas natural, para generar calor y producir movimiento. Existen diferentes tipos de motores térmicos, incluidos los de combustión interna y los motores de combustión externa."
+    },
+    "id" : "20",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "24", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://example.org/stelldj#ModeloVendido",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModeloVendido",
+      "es" : "Modelo Vendido"
+    },
+    "comment" : {
+      "es" : "Un Modelo Vendido se refiere a un vehículo automotor que ha sido comercializado y transferido por una entidad concesionaria, actuando como intermediaria, a un cliente final que lo adquiere para uso personal o privado. Este concepto implica la existencia de una transacción formal, incluyendo un contrato de compraventa, y la entrega del coche al comprador, quien se convierte en su propietario registrado."
+    },
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://example.org/stelldj#TraccionFrontal",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TraccionFrontal",
+      "es" : "Tracción Delantera",
+      "undefined" : "Traccion Frontal"
+    },
+    "comment" : {
+      "es" : "La tracción delantera (abreviada como FWD por sus siglas en inglés; en idiomas como el francés se utiliza simplemente la palabra \"traction\" para referirse a que la impulsión se halla en el eje delantero, y \"propulsión\" para denominar a la tracción trasera) es el sistema en el que el par motor se transmite solo al eje delantero. Es el mismo eje en el cual se suele encontrar la dirección del vehículo. La mayoría de los vehículos de tracción delantera incorporan el diferencial en la estructura de la caja de cambios."
+    },
+    "id" : "11",
+    "superClasses" : [ "9" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "13", "26" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "25"
+  }, {
+    "instances" : 0,
+    "union" : [ "28", "29", "4" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "27"
+  }, {
+    "instances" : 0,
+    "union" : [ "28", "29", "4" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "30"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "4" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "31"
+  }, {
+    "instances" : 0,
+    "union" : [ "32", "4" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "35"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "38" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/timebank#Electricity",
+    "baseIri" : "https://w3id.org/timebank",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/timebank",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Electricity",
+      "en" : "Electricity",
+      "es" : "Electricidad"
+    },
+    "comment" : {
+      "en" : "Electric outlet available.",
+      "es" : "Flujo de electrones que circula por un conductor en un determinado momento. Se mide en amperios."
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://example.org/stelldj#Gasolina",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gasolina",
+      "es" : "Gasolina"
+    },
+    "comment" : {
+      "es" : "La gasolina1 (también conocida como gasoleno; nafta en Argentina, Paraguay, Uruguay; bencina en Chile; o gasolín) es un producto, derivado del petróleo por destilación, que se utiliza principalmente como combustible en la mayoría de motores de combustión interna de encendido por chispa, así como en estufas y lámparas y para limpieza con disolventes, entre otras aplicaciones."
+    },
+    "id" : "39",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "http://example.org/stelldj#TelephoneNumber",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TelephoneNumber",
+      "es" : "Número de Teléfono"
+    },
+    "comment" : {
+      "es" : "Un número de teléfono (abreviado como: tfno., tlf., teléf. o tel.)? es una secuencia de dígitos utilizada para identificar una línea telefónica dentro de una red telefónica conmutada (RTC). El número contiene la información necesaria para identificar el punto final de la llamada. Los números de teléfono están a menudo asignados a líneas que tienen conectados dispositivos distintos de un teléfono, tales como faxes y módems. Cada uno de esos puntos de terminación de red tienen que tener un número único en la red para poder realizar una llamada telefónica."
+    },
+    "id" : "40"
+  }, {
+    "iri" : "http://example.org/stelldj#MarcaInferior",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MarcaInferior",
+      "es" : "Marca Inferior"
+    },
+    "comment" : {
+      "es" : "Una marca de coche se refiere al fabricante o compañía que fabrica el vehículo, mientras que el modelo representa la versión o diseño específico. Por ejemplo PEUGOT o OPEL."
+    },
+    "id" : "28"
+  }, {
+    "iri" : "http://example.org/stelldj#Traccion4x4",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Traccion4x4",
+      "es" : "Tracción integral"
+    },
+    "comment" : {
+      "es" : "La tracción en las cuatro ruedas, doble tracción, tracción integral o tracción total son expresiones comúnmente usadas para referirse a vehículos de turismo, todocamino y todoterreno de dos ejes. Generalmente abreviada como 4×4, o 4WD (4 Wheel Drive) y AWD (All Wheel Drive) en los países anglosajones, es un sistema de transmisión en un automóvil en el que ambos ejes pueden recibir simultáneamente la potencia del motor.? La mayoría de los automóviles todoterreno y camionetas tienen tracción en las cuatro ruedas, y también algunos turismos y deportivos de alta gama"
+    },
+    "id" : "10",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://example.org/stelldj#Rueda",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rueda",
+      "es" : "Rueda"
+    },
+    "comment" : {
+      "es" : "La rueda es una pieza circular que es fundamental en diferentes aspectos de la vida humana, especialmente en la ducha de los vehículos automóviles. Esencialmente, la rueda es un dispositivo que facilita el movimiento al reducir la fricción entre un cuerpo y la superficie sobre la que se sitúa."
+    },
+    "id" : "42"
+  }, {
+    "iri" : "http://example.org/stelldj#TraccionTrasera",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TraccionTrasera",
+      "es" : "Tracción Trasera"
+    },
+    "comment" : {
+      "es" : "La tracción trasera o propulsión trasera? (abreviada como \"RWD\" por sus siglas en inglés) es el sistema en el que la transmisión del movimiento del motor de un vehículo se realiza sobre el eje trasero."
+    },
+    "id" : "12",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person",
+      "es" : "Persona",
+      "undefined" : "person"
+    },
+    "subClasses" : [ "24" ],
+    "comment" : {
+      "en" : "A person.",
+      "es" : "Individuo de la especie humana."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://saref.etsi.org/saref4bldg/EnergyConversionDevice",
+    "baseIri" : "https://saref.etsi.org/saref4bldg",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyConversionDevice",
+      "en" : "Energy conversion device",
+      "es" : "Dispositivo de conversión energética"
+    },
+    "subClasses" : [ "66" ],
+    "comment" : {
+      "en" : "The distribution flow element EnergyConversionDevice defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system.",
+      "es" : "El dispositivo de conversión energética define la aparición de un dispositivo utilizado para realizar la conversión de energía o la transferencia de calor y que normalmente participa en un sistema de distribución de flujo."
+    },
+    "attributes" : [ "external" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://example.org/stelldj#CambioAutomatico",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CambioAutomatico",
+      "es" : "Cambio Automatico"
+    },
+    "comment" : {
+      "es" : "Una transmisión automática o caja automática es una caja de cambios de automóviles u otro tipo de vehículos que puede encargarse por sí misma de cambiar la relación de cambio automáticamente a medida que el vehículo se mueve, liberando así al conductor de la tarea de cambiar de marcha manualmente."
+    },
+    "id" : "67",
+    "superClasses" : [ "51" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "42" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "14", "28", "29" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.disit.org/km4city/schema#Insurance",
+    "baseIri" : "http://www.disit.org/km4city/schema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Insurance",
+      "en" : "Insurance",
+      "it" : "Assicurazione",
+      "es" : "Seguro"
+    },
+    "subClasses" : [ "32" ],
+    "comment" : {
+      "en" : "The instances of this class include, among all business activities, certain insurance, agents, sub agents, brokers and other intermediaries, including for the purpose of opening pension funds and life insurance.",
+      "it" : "Le istanze di questa classe rappresentano, tra tutte le attività d'impresa, talune attività di assicurazioni, agenti, sub-agenti, broker e altri intermediari, anche ai fini dell'apertura di fondi pensione e di assicurazioni sulla vita.",
+      "es" : "Un seguro o aseguración1?es un contrato, denominado póliza de seguro, por el que una Compañía de Seguros (el asegurador) se compromete, mediante el cobro de una prima y para el caso de que se produzca el evento cuyo riesgo es objeto de cobertura a indemnizar, dentro de los límites pactados, el daño producido al asegurado; bien a través de un capital, una renta, o a través de la prestación de un servicio. En este contrato intervienen: el asegurador, que siempre ha de ser una compañía de seguros, que es la entidad responsable de la cobertura en caso de siniestro; el asegurado, propietario de la póliza de seguro y responsable del pago de la prima correspondiente; y el beneficiario, que es la persona que cobrará la indemnización correspondiente en caso de siniestro. No siempre estas tres figuras han de ser la misma persona pudiendo ser todos distintos."
+    },
+    "attributes" : [ "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "42" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://example.org/stelldj#Concesionario",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concesionario",
+      "es" : "Concesionario"
+    },
+    "comment" : {
+      "es" : "Un concesionario o concesionaria es un comercio minorista que vende automóviles nuevos o de segunda mano. En la mayoría de los casos, los concesionarios son empresas independientes, autorizadas por las marcas fabricantes a vender sus vehículos por medio de un contrato de concesión. Para operar, los concesionarios emplean vendedores especializados y disponen de un salón de ventas para exhibir sus productos al público. Muchos desarrollan también actividades periféricas a la venta de autos, como revisión y mantenimiento mecánico, venta de repuestos, ejecución de garantías y gestiones de matrícula."
+    },
+    "id" : "7"
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "42" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://example.org/stelldj#MotorDeCoche",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MotorDeCoche",
+      "es" : "Motor De Coche"
+    },
+    "subClasses" : [ "20", "18", "21" ],
+    "comment" : {
+      "es" : "El motor de coche transforma la energía de combustión interna, la eléctrica o la combinación de ambas en energía que permite generar un continuo impulso mecánico cuya fuerza hace girar las ruedas para que el coche pueda desplazarse."
+    },
+    "id" : "16",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "18", "21" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://example.org/stelldj#CambioManual",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CambioManual",
+      "es" : "Cambio Manual"
+    },
+    "comment" : {
+      "es" : "Una transmisión manual o mecánica1? es una caja de cambios que no puede alterar la relación de cambio por sí sola, requiriendo la intervención del conductor para hacer esto. Por lo tanto, se diferencia de una transmisión automática en que esta última sí puede cambiar de marcha de forma autónoma."
+    },
+    "id" : "91",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://example.org/stelldj#0",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "0",
+      "es" : "0"
+    },
+    "comment" : {
+      "es" : "Etiqueta 0 emisiones: Identifica a los vehículos más eficientes. Tendrán derecho a esta etiqueta eléctricos de batería (BEV) , eléctricos de autonomía extendida (REEV), eléctricos híbridos enchufables (PHEV) con una autonomía de 40 km o vehículos de pila de combustible."
+    },
+    "id" : "26",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://example.org/stelldj#MarcaSuperior",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MarcaSuperior",
+      "es" : "Marca Superior"
+    },
+    "comment" : {
+      "es" : "Una marca superior se refiere al grupo que contiene al fabricante o compañía que fabrica el vehículo. Por ejemplo PSA o FCA."
+    },
+    "id" : "29"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/City",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "City",
+      "es" : "Ciudad"
+    },
+    "subClasses" : [ "34" ],
+    "comment" : {
+      "es" : "Una ciudad es un asentamiento de población humana con atribuciones y funciones políticas, administrativas, económicas y religiosas, a diferencia de los núcleos rurales que carecen de ellas, total o parcialmente. Esto tiene su reflejo material en la presencia de edificios específicos y en su configuración urbanística.1"
+    },
+    "attributes" : [ "external" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://example.org/stelldj#Diesel",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Diesel",
+      "es" : "Diésel"
+    },
+    "comment" : {
+      "es" : "El diésel (también conocido como gasóleo, gasoil, dísel o ACPM, siglas de «Aceite Combustible Para Motores») es un hidrocarburo líquido de densidad sobre 850 kg (1874 libras)/m³ o 0.85 g/cm³ a 15 °C (59 °F), compuesto fundamentalmente por parafinas y utilizado principalmente como combustible en calefacción y en motores diésel.4?5? Su poder calorífico inferior es de 35,86 MJ (10,0 kWh)/L o 43,1 MJ (12,0 kWh)/kg,? que depende de su composición."
+    },
+    "id" : "97",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://saref.etsi.org/saref4bldg/Engine",
+    "baseIri" : "https://saref.etsi.org/saref4bldg",
+    "instances" : 0,
+    "annotations" : {
+      "hadPrimarySource" : [ {
+        "identifier" : "hadPrimarySource",
+        "language" : "undefined",
+        "value" : "http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/pset/pset_enginetypecommon.htm",
+        "type" : "iri"
+      }, {
+        "identifier" : "hadPrimarySource",
+        "language" : "undefined",
+        "value" : "http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifchvacdomain/lexical/ifcengine.htm",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ifc/IFC4_ADD1#IfcEngine",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Engine",
+      "en" : "Engine",
+      "es" : "Motor"
+    },
+    "subClasses" : [ "16" ],
+    "comment" : {
+      "en" : "An engine is a device that converts fuel into mechanical energy through combustion.",
+      "es" : "Un motor es un dispositivo que convierte el combustible en energía mecánica mediante la combustión."
+    },
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "http://purl.org/holy/ns#FossilFuel",
+    "baseIri" : "http://purl.org/holy/ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FossilFuel",
+      "en" : "Fossil Fuel",
+      "es" : "Combustible fósil"
+    },
+    "subClasses" : [ "39", "97" ],
+    "comment" : {
+      "en" : "The subclass \"FossilFuel\" could be expanded to focus the domain scope to the creation of hydrogen concerning the value chain.",
+      "es" : "Un combustible fósil es aquel que procede de la biomasa producida en eras pasadas, que ha sufrido enterramiento y tras él, procesos de transformación, por aumento de presión y temperatura, hasta la formación de sustancias de gran contenido energético, como el carbón, el petróleo, o el gas natural. Al no ser energía renovable, no se considera como energía de la biomasa, aunque su origen sea orgánico o de biomasa.1?"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://example.org/stelldj#DispositivoAmbiental",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DispositivoAmbiental",
+      "es" : "Dispositivo Ambiental"
+    },
+    "subClasses" : [ "95", "13", "26" ],
+    "comment" : {
+      "es" : "El distintivo o dispositivo ambiental es una manera de clasificar los vehículos en función de su eficiencia energética, teniendo en cuenta el impacto medioambiental de los mismos."
+    },
+    "id" : "14"
+  }, {
+    "iri" : "http://example.org/stelldj#Comprador",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Comprador",
+      "es" : "Comprador"
+    },
+    "comment" : {
+      "es" : "Persona que compra un coche."
+    },
+    "id" : "24",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "128",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://example.org/stelldj#SeguroDeCoche",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeguroDeCoche",
+      "es" : "Seguro De Coche"
+    },
+    "comment" : {
+      "es" : "El seguro de coche ayuda a pagar por los daños y lesiones cuando ocurre un accidente de coches."
+    },
+    "id" : "32",
+    "superClasses" : [ "76" ]
+  }, {
+    "iri" : "http://dbpedia.org/ontology/CapitalOfRegion",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CapitalOfRegion",
+      "en" : "Capital Of Region",
+      "es" : "Capital de Región"
+    },
+    "comment" : {
+      "es" : "La mayoría de comunidades autónomas tienen una capital establecida, siendo esta la ciudad con mas densidad poblacional"
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "107" ]
+  }, {
+    "iri" : "http://example.org/stelldj#C",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "C",
+      "es" : "C"
+    },
+    "comment" : {
+      "es" : "Etiqueta C: Vehículos de combustión interna que cumplen con las últimas emisiones EURO. Tendrán derecho a esta etiqueta turismos y furgonetas ligeras de gasolina matriculadas a partir de enero de 2006 y diésel a partir de septiembre de 2015. Vehículos de más de 8 plazas, excluido el conductor, y pesados tanto de gasolina como diésel, matriculados desde 2014."
+    },
+    "id" : "95",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://example.org/stelldj#MotorHibrido",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MotorHibrido",
+      "es" : "Motor Híbrido"
+    },
+    "intersection" : [ "20", "18" ],
+    "comment" : {
+      "es" : "Un automóvil con motor híbrido es un tipo de vehículo caracterizado por tener dos juegos de motores diferentes pero complementarios: un motor de combustión interna con un depósito de combustible, más uno o varios motores eléctricos con batería. A lo que hay que sumar, por supuesto, las centralitas necesarias para pasar de un modo de conducción a otro o, incluso, usar ambas motorizaciones en paralelo."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "21",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://example.org/stelldj#CajaDeCambios",
+    "baseIri" : "http://example.org/stelldj",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CajaDeCambios",
+      "es" : "Caja De Cambios"
+    },
+    "subClasses" : [ "67", "91" ],
+    "comment" : {
+      "es" : "En los vehículos, la caja de cambios o caja de velocidades (también llamada simplemente caja) es el elemento encargado de obtener en las ruedas el par motor, suficiente para poner en movimiento el vehículo parado, y una vez en marcha obtener un par suficiente en ellas para vencer las resistencias al avance, fundamentalmente las derivadas del perfil aerodinámico, de rozamiento con la rodadura y de pendiente en ascenso."
+    },
+    "id" : "51"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "45",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "46",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "47",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "48",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "49",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "50",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "52",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "122",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "130",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "131",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "132",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "133",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "134",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "135",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "136",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "139",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://example.org/stelldj#RecargaElectrica",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "RecargaElectrica",
+      "es" : "recarga electrica"
+    },
+    "cardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "es" : "Cantidad de carga que pasa por la sección transversal de un conductor eléctrico en un segundo, cuando la corriente eléctrica es de un amperio."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://example.org/stelldj#FechaDeVenta",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "FechaDeVenta",
+      "es" : "Fecha de venta"
+    },
+    "domain" : "7",
+    "comment" : {
+      "es" : "Fecha en la que se realizó la venta del vehículo"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneParMaximo",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "TieneParMaximo",
+      "es" : "tiene par maximo"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "es" : "Fuerza que el motor es capaz de transmitir en un régimen de giro sobre un eje de transmisión"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://example.org/stelldj#PermiteAparcarGratis",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "PermiteAparcarGratis",
+      "es" : "permite aparcar gratis"
+    },
+    "domain" : "26",
+    "comment" : {
+      "es" : "Relación entre el vehículo y el lugar donde puede aparcar sin coste adicional"
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneRuedas",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "TieneRuedas",
+      "es" : "Tiene ruedas"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre las ruedas de un coche y el propio coche"
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneNumero",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "TieneNumero",
+      "es" : "Tiene numero"
+    },
+    "domain" : "23",
+    "comment" : {
+      "es" : "Relación entre el número de teléfono de una persona o entidad y la propia persona o entidad"
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "43"
+  }, {
+    "range" : "32",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneRuedas",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "TieneRuedas",
+      "es" : "Tiene ruedas"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre las ruedas de un coche y el propio coche"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://example.org/stelldj#Asegura",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "Asegura",
+      "es" : "asegura"
+    },
+    "domain" : "32",
+    "comment" : {
+      "es" : "Concierta una póliza de seguros con una entidad aseguradora para prevenir las consecuencias económicas desfavorables de un riesgo"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneDA",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "TieneDA",
+      "es" : "Tiene dispositivo ambiental"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre el dispositivo ambiental de un coche y el propio coche"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/EUTaxO#belongsTo",
+    "baseIri" : "https://w3id.org/EUTaxO",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "belongsTo",
+      "en" : "belongsTo",
+      "es" : "Pertenece a"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Defines a hierarchy from more generic taxa, to more specific ones"
+    },
+    "attributes" : [ "object", "allValues", "external", "transitive" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneMotor",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "TieneMotor",
+      "es" : "Tiene motor"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre el motor de un coche y el propio coche"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneCambio",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "TieneCambio",
+      "es" : "tiene cambio"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre la caja de cambios y el ccohe que la posee"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "50"
+  }, {
+    "range" : "26",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneCapacidadMaletero",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "TieneCapacidadMaletero",
+      "es" : "tiene capacidad maletero"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Volumen que tiene el maletero del vehículo"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneTraccion",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "TieneTraccion",
+      "es" : "Tiene traccion"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre la tracción de un coche y el coche"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/EUTaxO#belongsTo",
+    "baseIri" : "https://w3id.org/EUTaxO",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "belongsTo",
+      "en" : "belongsTo",
+      "es" : "Pertenece a"
+    },
+    "domain" : "28",
+    "comment" : {
+      "undefined" : "Defines a hierarchy from more generic taxa, to more specific ones"
+    },
+    "attributes" : [ "object", "allValues", "external", "transitive" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://schema.org/price",
+    "baseIri" : "http://schema.org",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "price",
+      "en" : "price"
+    },
+    "cardinality" : "1",
+    "domain" : "32",
+    "comment" : {
+      "en" : "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.",
+      "es" : "El precio de oferta de un producto, o de un componente del precio cuando se adjunta a PriceSpecification y sus subtipos."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://example.org/stelldj#hasName",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "hasName",
+      "en" : "has name",
+      "es" : "Tiene nombre"
+    },
+    "cardinality" : "1",
+    "domain" : "24",
+    "comment" : {
+      "es" : "Nombre del comprador"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://example.org/stelldj#Cilindrada",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "Cilindrada",
+      "es" : "Cilindrada"
+    },
+    "cardinality" : "1",
+    "domain" : "19",
+    "comment" : {
+      "es" : "La cilindrada de un carro, también conocida como desplazamiento del motor, es el volumen combinado de barrido de los pistones dentro de los cilindros de un motor, y se expresa en litros o centímetros cúbicos (c.c. o cm^3)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://example.org/stelldj#PerteneceAGama",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "PerteneceAGama",
+      "es" : "Pertenece a gama"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Gama en la que se sitúa un coche debido a su precio de venta al público"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://example.org/stelldj#CombustibleCada100",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "CombustibleCada100",
+      "es" : "Combustible consumido cada 100 Km"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Combustible consumido por el vehículo en 100 Km"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneAltura",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "TieneAltura",
+      "es" : "tiene altura"
+    },
+    "cardinality" : "1",
+    "domain" : "82",
+    "comment" : {
+      "es" : "Medida del coche considerada verticalmente desde su punto más elevado hasta su base."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://example.org/stelldj#Marchas",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "Marchas",
+      "es" : "Marchas"
+    },
+    "cardinality" : "1",
+    "domain" : "51",
+    "comment" : {
+      "es" : "Número de marchas del coche."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://example.org/stelldj#Acelera0a100",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "Acelera0a100",
+      "es" : "Aceleración de 0 a 100 Km/h"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Tiempo que tarda un coche en pasar de 0 a 100 Km/h"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneAnchura",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "TieneAnchura",
+      "es" : "tiene anchura"
+    },
+    "cardinality" : "1",
+    "domain" : "80",
+    "comment" : {
+      "es" : "Medida del coche considerada horizontalmente desde un lado al otro."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://example.org/stelldj#Asegura",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "Asegura",
+      "es" : "asegura"
+    },
+    "domain" : "32",
+    "comment" : {
+      "es" : "Concierta una póliza de seguros con una entidad aseguradora para prevenir las consecuencias económicas desfavorables de un riesgo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneVelocidadMaxima",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "TieneVelocidadMaxima",
+      "es" : "tiene velocidad maxima"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Máximo cantidad de espacio por unidad de tiempo capaz de ser recorrida por el vehículo"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "range" : "14",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "38",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "range" : "14",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://example.org/stelldj#TienePaginaWeb",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "TienePaginaWeb",
+      "es" : "tiene pagina web"
+    },
+    "cardinality" : "1",
+    "domain" : "72",
+    "comment" : {
+      "es" : "URL a la página web de referencia"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "99"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneTraccion",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "TieneTraccion",
+      "es" : "Tiene traccion"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre la tracción de un coche y el coche"
+    },
+    "attributes" : [ "object" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/owns",
+    "inverse" : "103",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "range" : "31",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "owns",
+      "en" : "owns",
+      "es" : "Posee"
+    },
+    "domain" : "24",
+    "attributes" : [ "object", "external" ],
+    "id" : "102"
+  }, {
+    "range" : "38",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://example.org/stelldj#ConsumeCombustible",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "ConsumeCombustible",
+      "es" : "consume combustible"
+    },
+    "domain" : "16",
+    "comment" : {
+      "es" : "Combustible utilizado para hacer funcionar un vehículo"
+    },
+    "attributes" : [ "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://example.org/stelldj#PerteneceASegmento",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "PerteneceASegmento",
+      "es" : "Pertenece a segmento"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Los segmentos de coches son clasificaciones utilizadas por la industria automovilística para agrupar vehículos según características como tamaño, capacidad, precio y tipo de motor."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/EUTaxO#belongsTo",
+    "baseIri" : "https://w3id.org/EUTaxO",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "belongsTo",
+      "en" : "belongsTo",
+      "es" : "Pertenece a"
+    },
+    "domain" : "30",
+    "comment" : {
+      "undefined" : "Defines a hierarchy from more generic taxa, to more specific ones"
+    },
+    "attributes" : [ "object", "external", "transitive" ],
+    "id" : "108"
+  }, {
+    "range" : "66",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneAutonomiaTotal",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "TieneAutonomiaTotal",
+      "es" : "tiene autonomia total"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Distancia que puede recorrer el vehículo con un depósito completo"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  }, {
+    "range" : "107",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "16",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "76",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "16",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "16",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "range" : "9",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "9",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "range" : "65",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "55",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://example.org/stelldj#TienePlazas",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "TienePlazas",
+      "es" : "tiene plazas"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "es" : "Número de asientos del vehículo"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://example.org/stelldj#PermiteAparcarGratis",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "PermiteAparcarGratis",
+      "es" : "permite aparcar gratis"
+    },
+    "domain" : "25",
+    "comment" : {
+      "es" : "Relación entre el vehículo y el lugar donde puede aparcar sin coste adicional"
+    },
+    "attributes" : [ "object" ],
+    "id" : "121"
+  }, {
+    "iri" : "http://www.owl-ontologies.com/dco#isLocatedAt",
+    "baseIri" : "http://www.owl-ontologies.com/dco",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "isLocatedAt",
+      "en" : "is located at",
+      "es" : "Está localizado en"
+    },
+    "domain" : "7",
+    "comment" : {
+      "es" : "Posición o punto geográfico en el que se encuentra un determinado lugar, comercio u objeto"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "122"
+  }, {
+    "iri" : "http://example.org/stelldj#RealizoVenta",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "RealizoVenta",
+      "es" : "Realizó venta"
+    },
+    "minCardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "es" : "Relación entre persona o entidad y el objeto que fue vendido"
+    },
+    "attributes" : [ "object" ],
+    "id" : "123"
+  }, {
+    "range" : "3",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneLongitud",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "TieneLongitud",
+      "es" : "tiene longitud"
+    },
+    "cardinality" : "1",
+    "domain" : "68",
+    "comment" : {
+      "es" : "Medida que expresa la distancia entre dos puntos"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "125"
+  }, {
+    "range" : "9",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "127"
+  }, {
+    "range" : "91",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/owns",
+    "inverse" : "103",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "owns",
+      "en" : "owns",
+      "es" : "Posee"
+    },
+    "domain" : "24",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "130"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneNumero",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "TieneNumero",
+      "es" : "Tiene numero"
+    },
+    "domain" : "24",
+    "comment" : {
+      "es" : "Relación entre el número de teléfono de una persona o entidad y la propia persona o entidad"
+    },
+    "attributes" : [ "object", "allValues", "functional" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://dbpedia.org/ontology/owns",
+    "inverse" : "103",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "owns",
+      "en" : "owns",
+      "es" : "Posee"
+    },
+    "domain" : "24",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://example.org/stelldj#RealizoVenta",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "RealizoVenta",
+      "es" : "Realizó venta"
+    },
+    "domain" : "7",
+    "comment" : {
+      "es" : "Relación entre persona o entidad y el objeto que fue vendido"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "133"
+  }, {
+    "iri" : "http://www.owl-ontologies.com/dco#isLocatedAt",
+    "baseIri" : "http://www.owl-ontologies.com/dco",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "isLocatedAt",
+      "en" : "is located at",
+      "es" : "Está localizado en"
+    },
+    "domain" : "7",
+    "comment" : {
+      "es" : "Posición o punto geográfico en el que se encuentra un determinado lugar, comercio u objeto"
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "134"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneNumero",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "TieneNumero",
+      "es" : "Tiene numero"
+    },
+    "domain" : "7",
+    "comment" : {
+      "es" : "Relación entre el número de teléfono de una persona o entidad y la propia persona o entidad"
+    },
+    "attributes" : [ "object", "allValues", "functional" ],
+    "id" : "135"
+  }, {
+    "iri" : "http://example.org/stelldj#PermiteAparcarGratis",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "PermiteAparcarGratis",
+      "es" : "permite aparcar gratis"
+    },
+    "domain" : "13",
+    "comment" : {
+      "es" : "Relación entre el vehículo y el lugar donde puede aparcar sin coste adicional"
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneCambio",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "TieneCambio",
+      "es" : "tiene cambio"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre la caja de cambios y el ccohe que la posee"
+    },
+    "attributes" : [ "object" ],
+    "id" : "137"
+  }, {
+    "range" : "13",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "138"
+  }, {
+    "range" : "26",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://example.org/stelldj#IsOwnedBy",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "IsOwnedBy",
+      "en" : "Is owned by",
+      "es" : "Es propiedad de"
+    },
+    "domain" : "35",
+    "comment" : {
+      "es" : "Relación de pertenencia que tiene un objeto con una persona o lugar"
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.owl-ontologies.com/s4envi#hasColor",
+    "baseIri" : "http://www.owl-ontologies.com/s4envi",
+    "range" : "128",
+    "label" : {
+      "IRI-based" : "hasColor",
+      "en" : "has color",
+      "es" : "Tiene color"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "en" : "A relation between a light emitted and its color.",
+      "es" : "Una relación entre la luz emitida y su color."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneKV",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "TieneKV",
+      "es" : "tiene KV"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "es" : "Kilovatios (KV) que tiene de potencia del vehículo, siendo esta la potencia según el Sistema Internacional de Unidades"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneMotor",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "TieneMotor",
+      "es" : "Tiene motor"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre el motor de un coche y el propio coche"
+    },
+    "attributes" : [ "object" ],
+    "id" : "142"
+  }, {
+    "iri" : "http://www.owl-ontologies.com/saref#hasValue",
+    "baseIri" : "http://www.owl-ontologies.com/saref",
+    "range" : "126",
+    "label" : {
+      "IRI-based" : "hasValue",
+      "en" : "has value",
+      "es" : "Tiene valor"
+    },
+    "cardinality" : "1",
+    "domain" : "40",
+    "comment" : {
+      "en" : "Value of a property value expressed as an RDF literal. Note that, even if decimal values are expected, values could use other datatypes.",
+      "es" : "Valor de una propiedad expresado como un literal RDF. Tenga en cuenta que, aunque se esperen valores decimales, los valores podrían utilizar otros tipos de datos."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "143"
+  }, {
+    "iri" : "http://example.org/stelldj#EmisionesWLTP",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "EmisionesWLTP",
+      "es" : "Emisiones WLTP"
+    },
+    "cardinality" : "1",
+    "domain" : "14",
+    "comment" : {
+      "es" : "Emisiones emitidas por un coche de acuerdo con WLTP"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneCV",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "TieneCV",
+      "es" : "Tiene CV"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "es" : "Caballos de vapor (CV) que tiene de potencia del vehículo"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://example.org/stelldj#TieneDA",
+    "baseIri" : "http://example.org/stelldj",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "TieneDA",
+      "es" : "Tiene dispositivo ambiental"
+    },
+    "domain" : "4",
+    "comment" : {
+      "es" : "Relación entre el dispositivo ambiental de un coche y el propio coche"
+    },
+    "attributes" : [ "object" ],
+    "id" : "146"
+  }, {
+    "range" : "51",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "147"
+  }, {
+    "range" : "51",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  } ]
+}

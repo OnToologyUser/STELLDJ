@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>StellDJ</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://example.org/stelldj#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://example.org/stelldj#","name":"StellDJ", "headline":"La ontología STELLDJ está diseñada para modelar información clave del dominio automovilístico de las marcas de Stellantis, abordando aspectos como los segmentos de vehículos, tipos de motor, combustibles, gamas de precios y concesionarios. Esta ontología proporciona una estructura semántica que permite la interoperabilidad de datos y el análisis eficiente de información relevante para fabricantes, concesionarios y consumidores.El modelo incluye clases principales como Vehículo, Motor, Concesionario, EtiquetaMedioambiental y Segmento, conectadas mediante relaciones definidas y propiedades de datos que reflejan el mercado automovilístico real. Además, la ontología ha sido enriquecida con información externa obtenida de recursos como Km77 (especificaciones técnicas de vehículos), la DGT (etiquetas medioambientales) y Wikipedia (descripciones mediante rdfs:comments).", "dateReleased":"Mon Jan 20 23:26:31 CET 2025", "version":"0.0.1", "license":"http://purl.org/NET/rdflicense/cc-by-nc-sa4.0", "author":[{"@type":"Person","name":"Diego Rosete"},{"@type":"Person","name":"Juan Murillo"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Tabla de contenidos</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-es.html"><b>es</b></a> </div>
+<h1>StellDJ</h1>
+
+
+<dl>
+<dt>&Uacute;ltima Versi&oacute;n:</dt>
+<dd><a href="http://example.org/stelldj#">http://example.org/stelldj#</a></dd>
+<dt>Revisi&oacute;n n&uacute;mero:</dt>
+<dd>0.0.1</dd>
+<dt>Autores:</dt>
+<dd>Diego Rosete</dd><dd>Juan Murillo</dd>
+
+<dt>Descargar serializaci&oacute;n:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Licencia:</dt><dd><a href="http://purl.org/NET/rdflicense/cc-by-nc-sa4.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/cc_by_nc_sa4.0-blue.svg" alt="http://purl.org/NET/rdflicense/cc-by-nc-sa4.0" /></a>
+</dd><dt>Visualizaci&oacute;n:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Citar como:</dt>
+<dd>Diego Rosete, Juan Murillo. StellDJ. Revision: 0.0.1.</dd>
+</dl>
+
+<a href="provenance/provenance-es.html" target="_blank">Provenance de esta p&aacute;gina</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>S&iacute;ntesis</h2><span class="markdown">
+La ontología STELLDJ está diseñada para modelar información clave del dominio automovilístico de las marcas de Stellantis, abordando aspectos como los segmentos de vehículos, tipos de motor, combustibles, gamas de precios y concesionarios. Esta ontología proporciona una estructura semántica que permite la interoperabilidad de datos y el análisis eficiente de información relevante para fabricantes, concesionarios y consumidores.
+
+El modelo incluye clases principales como Vehículo, Motor, Concesionario, EtiquetaMedioambiental y Segmento, conectadas mediante relaciones definidas y propiedades de datos que reflejan el mercado automovilístico real. Además, la ontología ha sido enriquecida con información externa obtenida de recursos como Km77 (especificaciones técnicas de vehículos), la DGT (etiquetas medioambientales) y Wikipedia (descripciones mediante rdfs:comments).</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introducci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">La ontología STELLDJ modela datos automovilísticos de las marcas de Stellantis, como segmentos de vehículos, tipos de motor, combustibles y concesionarios. Su objetivo es facilitar la interoperabilidad y el análisis eficiente del mercado automovilístico. Desarrollada con Chowlk, Protégé y documentada con Widoco, ofrece una estructura clara y reutilizable para aplicaciones semánticas.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">StellDJ: Resumen <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">La ontolog&iacute;a se compone de las siguientes clases y propiedades:</span>
+<h4>Clases</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#0" title="http://example.org/stelldj#0">0</a>
+   </li>
+   <li>
+      <a href="#C" title="http://example.org/stelldj#C">C</a>
+   </li>
+   <li>
+      <a href="#CajaDeCambios" title="http://example.org/stelldj#CajaDeCambios">Caja De Cambios</a>
+   </li>
+   <li>
+      <a href="#CambioAutomatico" title="http://example.org/stelldj#CambioAutomatico">Cambio Automatico</a>
+   </li>
+   <li>
+      <a href="#CambioManual" title="http://example.org/stelldj#CambioManual">Cambio Manual</a>
+   </li>
+   <li>
+      <a href="#http://dbpedia.org/ontology/CapitalOfRegion" title="http://dbpedia.org/ontology/CapitalOfRegion">Capital de Región</a>
+   </li>
+   <li>
+      <a href="#http://dbpedia.org/ontology/City" title="http://dbpedia.org/ontology/City">Ciudad</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/holy/ns#Car" title="http://purl.org/holy/ns#Car">Coche</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/holy/ns#FossilFuel" title="http://purl.org/holy/ns#FossilFuel">Combustible fósil</a>
+   </li>
+   <li>
+      <a href="#Comprador" title="http://example.org/stelldj#Comprador">Comprador</a>
+   </li>
+   <li>
+      <a href="#Concesionario" title="http://example.org/stelldj#Concesionario">Concesionario</a>
+   </li>
+   <li>
+      <a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/saref4bldg/EnergyConversionDevice"
+         title="https://saref.etsi.org/saref4bldg/EnergyConversionDevice">Dispositivo de conversión energética</a>
+   </li>
+   <li>
+      <a href="#Diesel" title="http://example.org/stelldj#Diesel">Diésel</a>
+   </li>
+   <li>
+      <a href="#ECO" title="http://example.org/stelldj#ECO">E C O</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/timebank#Electricity" title="https://w3id.org/timebank#Electricity">Electricidad</a>
+   </li>
+   <li>
+      <a href="#Gasolina" title="http://example.org/stelldj#Gasolina">Gasolina</a>
+   </li>
+   <li>
+      <a href="#MarcaInferior" title="http://example.org/stelldj#MarcaInferior">Marca Inferior</a>
+   </li>
+   <li>
+      <a href="#MarcaSuperior" title="http://example.org/stelldj#MarcaSuperior">Marca Superior</a>
+   </li>
+   <li>
+      <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/saref4bldg/Engine" title="https://saref.etsi.org/saref4bldg/Engine">Motor</a>
+   </li>
+   <li>
+      <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a>
+   </li>
+   <li>
+      <a href="#MotorElectrico" title="http://example.org/stelldj#MotorElectrico">Motor Electrico</a>
+   </li>
+   <li>
+      <a href="#MotorHibrido" title="http://example.org/stelldj#MotorHibrido">Motor Híbrido</a>
+   </li>
+   <li>
+      <a href="#MotorTermico" title="http://example.org/stelldj#MotorTermico">Motor Térmico</a>
+   </li>
+   <li>
+      <a href="#TelephoneNumber" title="http://example.org/stelldj#TelephoneNumber">Número de Teléfono</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Persona</a>
+   </li>
+   <li>
+      <a href="#Rueda" title="http://example.org/stelldj#Rueda">Rueda</a>
+   </li>
+   <li>
+      <a href="#http://www.disit.org/km4city/schema#Insurance" title="http://www.disit.org/km4city/schema#Insurance">Seguro</a>
+   </li>
+   <li>
+      <a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a>
+   </li>
+   <li>
+      <a href="#Traccion4x4" title="http://example.org/stelldj#Traccion4x4">Traccion4x4</a>
+   </li>
+   <li>
+      <a href="#Traccion" title="http://example.org/stelldj#Traccion">Tracción de coche</a>
+   </li>
+   <li>
+      <a href="#TraccionFrontal" title="http://example.org/stelldj#TraccionFrontal">Tracción Delantera</a>
+   </li>
+   <li>
+      <a href="#TraccionTrasera" title="http://example.org/stelldj#TraccionTrasera">Tracción Trasera</a>
+   </li>
+</ul><h4>Propiedades de objeto</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Asegura" title="http://example.org/stelldj#Asegura">asegura</a>
+   </li>
+   <li>
+      <a href="#ConsumeCombustible" title="http://example.org/stelldj#ConsumeCombustible">consume combustible</a>
+   </li>
+   <li>
+      <a href="#IsOwnedBy" title="http://example.org/stelldj#IsOwnedBy">Es propiedad de</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/dco#isLocatedAt" title="http://www.owl-ontologies.com/dco#isLocatedAt">Está localizado en</a>
+   </li>
+   <li>
+      <a href="#PermiteAparcarGratis" title="http://example.org/stelldj#PermiteAparcarGratis">permite aparcar gratis</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a>
+   </li>
+   <li>
+      <a href="#http://dbpedia.org/ontology/owns" title="http://dbpedia.org/ontology/owns">Posee</a>
+   </li>
+   <li>
+      <a href="#RealizoVenta" title="http://example.org/stelldj#RealizoVenta">Realizó venta</a>
+   </li>
+   <li>
+      <a href="#TieneCambio" title="http://example.org/stelldj#TieneCambio">tiene cambio</a>
+   </li>
+   <li>
+      <a href="#TieneDA" title="http://example.org/stelldj#TieneDA">Tiene dispositivo ambiental</a>
+   </li>
+   <li>
+      <a href="#TieneMotor" title="http://example.org/stelldj#TieneMotor">Tiene motor</a>
+   </li>
+   <li>
+      <a href="#TieneNumero" title="http://example.org/stelldj#TieneNumero">Tiene numero</a>
+   </li>
+   <li>
+      <a href="#TieneRuedas" title="http://example.org/stelldj#TieneRuedas">Tiene ruedas</a>
+   </li>
+   <li>
+      <a href="#TieneTraccion" title="http://example.org/stelldj#TieneTraccion">Tiene traccion</a>
+   </li>
+</ul><h4>Propiedades de datos</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Acelera0a100" title="http://example.org/stelldj#Acelera0a100">Aceleración de 0 a 100 Km/h</a>
+   </li>
+   <li>
+      <a href="#Cilindrada" title="http://example.org/stelldj#Cilindrada">Cilindrada</a>
+   </li>
+   <li>
+      <a href="#CombustibleCada100" title="http://example.org/stelldj#CombustibleCada100">Combustible consumido cada 100 Km</a>
+   </li>
+   <li>
+      <a href="#EmisionesWLTP" title="http://example.org/stelldj#EmisionesWLTP">Emisiones WLTP</a>
+   </li>
+   <li>
+      <a href="#FechaDeVenta" title="http://example.org/stelldj#FechaDeVenta">Fecha de venta</a>
+   </li>
+   <li>
+      <a href="#Marchas" title="http://example.org/stelldj#Marchas">Marchas</a>
+   </li>
+   <li>
+      <a href="#PerteneceAGama" title="http://example.org/stelldj#PerteneceAGama">Pertenece a gama</a>
+   </li>
+   <li>
+      <a href="#PerteneceASegmento" title="http://example.org/stelldj#PerteneceASegmento">Pertenece a segmento</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/price" title="http://schema.org/price">price</a>
+   </li>
+   <li>
+      <a href="#RecargaElectrica" title="http://example.org/stelldj#RecargaElectrica">recarga electrica</a>
+   </li>
+   <li>
+      <a href="#TieneAltura" title="http://example.org/stelldj#TieneAltura">tiene altura</a>
+   </li>
+   <li>
+      <a href="#TieneAnchura" title="http://example.org/stelldj#TieneAnchura">tiene anchura</a>
+   </li>
+   <li>
+      <a href="#TieneAutonomiaTotal" title="http://example.org/stelldj#TieneAutonomiaTotal">tiene autonomia total</a>
+   </li>
+   <li>
+      <a href="#TieneCapacidadMaletero"
+         title="http://example.org/stelldj#TieneCapacidadMaletero">tiene capacidad maletero</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/s4envi#hasColor" title="http://www.owl-ontologies.com/s4envi#hasColor">Tiene color</a>
+   </li>
+   <li>
+      <a href="#TieneCV" title="http://example.org/stelldj#TieneCV">Tiene CV</a>
+   </li>
+   <li>
+      <a href="#TieneKV" title="http://example.org/stelldj#TieneKV">tiene KV</a>
+   </li>
+   <li>
+      <a href="#TieneLongitud" title="http://example.org/stelldj#TieneLongitud">tiene longitud</a>
+   </li>
+   <li>
+      <a href="#hasName" title="http://example.org/stelldj#hasName">Tiene nombre</a>
+   </li>
+   <li>
+      <a href="#TienePaginaWeb" title="http://example.org/stelldj#TienePaginaWeb">tiene pagina web</a>
+   </li>
+   <li>
+      <a href="#TieneParMaximo" title="http://example.org/stelldj#TieneParMaximo">tiene par maximo</a>
+   </li>
+   <li>
+      <a href="#TienePlazas" title="http://example.org/stelldj#TienePlazas">tiene plazas</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/saref#hasValue" title="http://www.owl-ontologies.com/saref#hasValue">Tiene valor</a>
+   </li>
+   <li>
+      <a href="#TieneVelocidadMaxima" title="http://example.org/stelldj#TieneVelocidadMaxima">tiene velocidad maxima</a>
+   </li>
+</ul><h4>Propiedades usadas para anotaci&oacute;n</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel">
+         <span>alt Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#createdWith" title="https://w3id.org/mod#createdWith">
+         <span>created With</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example">
+         <span>example</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#hadPrimarySource" title="http://www.w3.org/ns/prov#hadPrimarySource">
+         <span>had Primary Source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#hiddenLabel" title="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+         <span>hidden Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://wordnet-rdf.princeton.edu/ontology#hyponym"
+         title="https://wordnet-rdf.princeton.edu/ontology#hyponym">
+         <span>hyponym</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">
+         <span>references</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+         title="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+         <span>term status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo">
+         <span>version Info</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">StellDJ: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+
+<span class="markdown">La ontología STELLDJ modela el dominio automovilístico de las marcas de Stellantis mediante una estructura organizada y semánticamente coherente. Las relaciones entre clases están diseñadas para reflejar las conexiones reales entre los diferentes componentes del mercado automovilístico, desde los vehículos y sus especificaciones técnicas hasta las etiquetas medioambientales y los concesionarios que los comercializan.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">T&eacute;rminos de StellDJ para clases, propiedades de objeto y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por StellDJ.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Clases</h3>
+ <ul class="hlist">
+  <li><a href="#0" title="http://example.org/stelldj#0">0</a></li>
+  <li><a href="#C" title="http://example.org/stelldj#C">C</a></li>
+  <li><a href="#CajaDeCambios" title="http://example.org/stelldj#CajaDeCambios">Caja De Cambios</a></li>
+  <li><a href="#CambioAutomatico" title="http://example.org/stelldj#CambioAutomatico">Cambio Automatico</a></li>
+  <li><a href="#CambioManual" title="http://example.org/stelldj#CambioManual">Cambio Manual</a></li>
+  <li><a href="#http://dbpedia.org/ontology/CapitalOfRegion" title="http://dbpedia.org/ontology/CapitalOfRegion">Capital de Región</a></li>
+  <li><a href="#http://dbpedia.org/ontology/City" title="http://dbpedia.org/ontology/City">Ciudad</a></li>
+  <li><a href="#http://purl.org/holy/ns#Car" title="http://purl.org/holy/ns#Car">Coche</a></li>
+  <li><a href="#http://purl.org/holy/ns#FossilFuel" title="http://purl.org/holy/ns#FossilFuel">Combustible fósil</a></li>
+  <li><a href="#Comprador" title="http://example.org/stelldj#Comprador">Comprador</a></li>
+  <li><a href="#Concesionario" title="http://example.org/stelldj#Concesionario">Concesionario</a></li>
+  <li><a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a></li>
+  <li><a href="#https://saref.etsi.org/saref4bldg/EnergyConversionDevice" title="https://saref.etsi.org/saref4bldg/EnergyConversionDevice">Dispositivo de conversión energética</a></li>
+  <li><a href="#Diesel" title="http://example.org/stelldj#Diesel">Diésel</a></li>
+  <li><a href="#ECO" title="http://example.org/stelldj#ECO">E C O</a></li>
+  <li><a href="#https://w3id.org/timebank#Electricity" title="https://w3id.org/timebank#Electricity">Electricidad</a></li>
+  <li><a href="#Gasolina" title="http://example.org/stelldj#Gasolina">Gasolina</a></li>
+  <li><a href="#MarcaInferior" title="http://example.org/stelldj#MarcaInferior">Marca Inferior</a></li>
+  <li><a href="#MarcaSuperior" title="http://example.org/stelldj#MarcaSuperior">Marca Superior</a></li>
+  <li><a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a></li>
+  <li><a href="#https://saref.etsi.org/saref4bldg/Engine" title="https://saref.etsi.org/saref4bldg/Engine">Motor</a></li>
+  <li><a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a></li>
+  <li><a href="#MotorElectrico" title="http://example.org/stelldj#MotorElectrico">Motor Electrico</a></li>
+  <li><a href="#MotorHibrido" title="http://example.org/stelldj#MotorHibrido">Motor Híbrido</a></li>
+  <li><a href="#MotorTermico" title="http://example.org/stelldj#MotorTermico">Motor Térmico</a></li>
+  <li><a href="#TelephoneNumber" title="http://example.org/stelldj#TelephoneNumber">Número de Teléfono</a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Persona</a></li>
+  <li><a href="#Rueda" title="http://example.org/stelldj#Rueda">Rueda</a></li>
+  <li><a href="#http://www.disit.org/km4city/schema#Insurance" title="http://www.disit.org/km4city/schema#Insurance">Seguro</a></li>
+  <li><a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a></li>
+  <li><a href="#Traccion4x4" title="http://example.org/stelldj#Traccion4x4">Traccion4x4</a></li>
+  <li><a href="#Traccion" title="http://example.org/stelldj#Traccion">Tracción de coche</a></li>
+  <li><a href="#TraccionFrontal" title="http://example.org/stelldj#TraccionFrontal">Tracción Delantera</a></li>
+  <li><a href="#TraccionTrasera" title="http://example.org/stelldj#TraccionTrasera">Tracción Trasera</a></li>
+ </ul>
+ <div class="entity" id="0">
+  <h3>0<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#0</p>
+  <div class="comment">
+   <span class="markdown">Etiqueta 0 emisiones: Identifica a los vehículos más eficientes. Tendrán derecho a esta etiqueta eléctricos de batería (BEV) , eléctricos de autonomía extendida (REEV), eléctricos híbridos enchufables (PHEV) con una autonomía de 40 km o vehículos de pila de combustible.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#PermiteAparcarGratis" title="http://example.org/stelldj#PermiteAparcarGratis">permite aparcar gratis</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#C" title="http://example.org/stelldj#C">C</a> <sup class="type-c" title="clase">c</sup>, <a href="#ECO" title="http://example.org/stelldj#ECO">E C O</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="C">
+  <h3>C<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#C</p>
+  <div class="comment">
+   <span class="markdown">Etiqueta C: Vehículos de combustión interna que cumplen con las últimas emisiones EURO. Tendrán derecho a esta etiqueta turismos y furgonetas ligeras de gasolina matriculadas a partir de enero de 2006 y diésel a partir de septiembre de 2015. Vehículos de más de 8 plazas, excluido el conductor, y pesados tanto de gasolina como diésel, matriculados desde 2014.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#ECO" title="http://example.org/stelldj#ECO">E C O</a> <sup class="type-c" title="clase">c</sup>, <a href="#0" title="http://example.org/stelldj#0">0</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CajaDeCambios">
+  <h3>Caja De Cambios<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#CajaDeCambios</p>
+  <div class="comment">
+   <span class="markdown">En los vehículos, la caja de cambios o caja de velocidades (también llamada simplemente caja) es el elemento encargado de obtener en las ruedas el par motor, suficiente para poner en movimiento el vehículo parado, y una vez en marcha obtener un par suficiente en ellas para vencer las resistencias al avance, fundamentalmente las derivadas del perfil aerodinámico, de rozamiento con la rodadura y de pendiente en ascenso.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd></dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#CambioAutomatico" title="http://example.org/stelldj#CambioAutomatico">Cambio Automatico</a> <sup class="type-c" title="clase">c</sup>, <a href="#CambioManual" title="http://example.org/stelldj#CambioManual">Cambio Manual</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#Marchas" title="http://example.org/stelldj#Marchas">Marchas</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#TieneCambio" title="http://example.org/stelldj#TieneCambio">tiene cambio</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CambioAutomatico">
+  <h3>Cambio Automatico<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#CambioAutomatico</p>
+  <div class="comment">
+   <span class="markdown">Una transmisión automática o caja automática es una caja de cambios de automóviles u otro tipo de vehículos que puede encargarse por sí misma de cambiar la relación de cambio automáticamente a medida que el vehículo se mueve, liberando así al conductor de la tarea de cambiar de marcha manualmente.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#CajaDeCambios" title="http://example.org/stelldj#CajaDeCambios">Caja De Cambios</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#CambioManual" title="http://example.org/stelldj#CambioManual">Cambio Manual</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CambioManual">
+  <h3>Cambio Manual<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#CambioManual</p>
+  <div class="comment">
+   <span class="markdown">Una transmisión manual o mecánica1​ es una caja de cambios que no puede alterar la relación de cambio por sí sola, requiriendo la intervención del conductor para hacer esto. Por lo tanto, se diferencia de una transmisión automática en que esta última sí puede cambiar de marcha de forma autónoma.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#CajaDeCambios" title="http://example.org/stelldj#CajaDeCambios">Caja De Cambios</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#CambioAutomatico" title="http://example.org/stelldj#CambioAutomatico">Cambio Automatico</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://dbpedia.org/ontology/CapitalOfRegion">
+  <h3>Capital de Región<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://dbpedia.org/ontology/CapitalOfRegion</p>
+  <div class="comment">
+   <span class="markdown">La mayoría de comunidades autónomas tienen una capital establecida, siendo esta la ciudad con mas densidad poblacional</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://dbpedia.org/ontology/City" title="http://dbpedia.org/ontology/City">Ciudad</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#PermiteAparcarGratis" title="http://example.org/stelldj#PermiteAparcarGratis">permite aparcar gratis</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://dbpedia.org/ontology/City">
+  <h3>Ciudad<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://dbpedia.org/ontology/City</p>
+  <div class="comment">
+   <span class="markdown">Una ciudad es un asentamiento de población humana con atribuciones y funciones políticas, administrativas, económicas y religiosas, a diferencia de los núcleos rurales que carecen de ellas, total o parcialmente. Esto tiene su reflejo material en la presencia de edificios específicos y en su configuración urbanística.1</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://dbpedia.org/ontology/CapitalOfRegion" title="http://dbpedia.org/ontology/CapitalOfRegion">Capital de Región</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/dco#isLocatedAt" title="http://www.owl-ontologies.com/dco#isLocatedAt">Está localizado en</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/holy/ns#Car">
+  <h3>Coche<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/holy/ns#Car</p>
+  <div class="comment">
+   <span class="markdown">El cochel (también conocido como auto, coche o carro en algunos países hispanoamericanos) es un vehículo motorizado con ruedas utilizado para el transporte. Está compuesto por diversas partes, como motor, chasis, tipo de carrocería y sistemas de dirección, frenos y suspensión. La mayoría de las definiciones de automóvil hacen referencia a los vehículos que circulan principalmente por las carreteras, con capacidad de una a ocho personas. Cuentan con cuatro neumáticos y transportan principalmente a personas, antes que mercancías.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    http://schema.org/
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/holy/ns#FossilFuel">
+  <h3>Combustible fósil<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/holy/ns#FossilFuel</p>
+  <div class="comment">
+   <span class="markdown">Un combustible fósil es aquel que procede de la biomasa producida en eras pasadas, que ha sufrido enterramiento y tras él, procesos de transformación, por aumento de presión y temperatura, hasta la formación de sustancias de gran contenido energético, como el carbón, el petróleo, o el gas natural. Al no ser energía renovable, no se considera como energía de la biomasa, aunque su origen sea orgánico o de biomasa.1​</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#Diesel" title="http://example.org/stelldj#Diesel">Diésel</a> <sup class="type-c" title="clase">c</sup>, <a href="#Gasolina" title="http://example.org/stelldj#Gasolina">Gasolina</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#ConsumeCombustible" title="http://example.org/stelldj#ConsumeCombustible">consume combustible</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Comprador">
+  <h3>Comprador<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Comprador</p>
+  <div class="comment">
+   <span class="markdown">Persona que compra un coche.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Persona</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#http://dbpedia.org/ontology/owns" title="http://dbpedia.org/ontology/owns">Posee</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasName" title="http://example.org/stelldj#hasName">Tiene nombre</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneNumero" title="http://example.org/stelldj#TieneNumero">Tiene numero</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#IsOwnedBy" title="http://example.org/stelldj#IsOwnedBy">Es propiedad de</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Concesionario">
+  <h3>Concesionario<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Concesionario</p>
+  <div class="comment">
+   <span class="markdown">Un concesionario o concesionaria es un comercio minorista que vende automóviles nuevos o de segunda mano. En la mayoría de los casos, los concesionarios son empresas independientes, autorizadas por las marcas fabricantes a vender sus vehículos por medio de un contrato de concesión. Para operar, los concesionarios emplean vendedores especializados y disponen de un salón de ventas para exhibir sus productos al público. Muchos desarrollan también actividades periféricas a la venta de autos, como revisión y mantenimiento mecánico, venta de repuestos, ejecución de garantías y gestiones de matrícula.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd></dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/dco#isLocatedAt" title="http://www.owl-ontologies.com/dco#isLocatedAt">Está localizado en</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#FechaDeVenta" title="http://example.org/stelldj#FechaDeVenta">Fecha de venta</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#RealizoVenta" title="http://example.org/stelldj#RealizoVenta">Realizó venta</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TieneNumero" title="http://example.org/stelldj#TieneNumero">Tiene numero</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DispositivoAmbiental">
+  <h3>Dispositivo Ambiental<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#DispositivoAmbiental</p>
+  <div class="comment">
+   <span class="markdown">El distintivo o dispositivo ambiental es una manera de clasificar los vehículos en función de su eficiencia energética, teniendo en cuenta el impacto medioambiental de los mismos.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd></dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#0" title="http://example.org/stelldj#0">0</a> <sup class="type-c" title="clase">c</sup>, <a href="#C" title="http://example.org/stelldj#C">C</a> <sup class="type-c" title="clase">c</sup>, <a href="#ECO" title="http://example.org/stelldj#ECO">E C O</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#EmisionesWLTP" title="http://example.org/stelldj#EmisionesWLTP">Emisiones WLTP</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TienePaginaWeb" title="http://example.org/stelldj#TienePaginaWeb">tiene pagina web</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#TieneDA" title="http://example.org/stelldj#TieneDA">Tiene dispositivo ambiental</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://saref.etsi.org/saref4bldg/EnergyConversionDevice">
+  <h3>Dispositivo de conversión energética<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://saref.etsi.org/saref4bldg/EnergyConversionDevice</p>
+  <div class="comment">
+   <span class="markdown">El dispositivo de conversión energética define la aparición de un dispositivo utilizado para realizar la conversión de energía o la transferencia de calor y que normalmente participa en un sistema de distribución de flujo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/saref4bldg/Engine" title="https://saref.etsi.org/saref4bldg/Engine">Motor</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Diesel">
+  <h3>Diésel<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Diesel</p>
+  <div class="comment">
+   <span class="markdown">El diésel (también conocido como gasóleo, gasoil, dísel o ACPM, siglas de «Aceite Combustible Para Motores») es un hidrocarburo líquido de densidad sobre 850 kg (1874 libras)/m³ o 0.85 g/cm³ a 15 °C (59 °F), compuesto fundamentalmente por parafinas y utilizado principalmente como combustible en calefacción y en motores diésel.4​5​ Su poder calorífico inferior es de 35,86 MJ (10,0 kWh)/L o 43,1 MJ (12,0 kWh)/kg,​ que depende de su composición.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://purl.org/holy/ns#FossilFuel" title="http://purl.org/holy/ns#FossilFuel">Combustible fósil</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ECO">
+  <h3>E C O<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#ECO</p>
+  <div class="comment">
+   <span class="markdown">Etiqueta Eco: Los siguientes en el escalón de eficiencia, se trata en su mayoría de vehículos híbridos, gas o ambos. Tendrán derecho a esta etiqueta eléctricos enchufables con autonomía inferior a 40 km, híbridos no enchufables (HEV), vehículos propulsados por gas natural y gas (GNC y GNL) o gas licuado del petróleo (GLP). Deben cumplir los criterios de la etiqueta C.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#PermiteAparcarGratis" title="http://example.org/stelldj#PermiteAparcarGratis">permite aparcar gratis</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#C" title="http://example.org/stelldj#C">C</a> <sup class="type-c" title="clase">c</sup>, <a href="#0" title="http://example.org/stelldj#0">0</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/timebank#Electricity">
+  <h3>Electricidad<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/timebank#Electricity</p>
+  <div class="comment">
+   <span class="markdown">Flujo de electrones que circula por un conductor en un determinado momento. Se mide en amperios.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="https://w3id.org/timebank">https://w3id.org/timebank</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Gasolina">
+  <h3>Gasolina<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Gasolina</p>
+  <div class="comment">
+   <span class="markdown">La gasolina1 (también conocida como gasoleno; nafta en Argentina, Paraguay, Uruguay; bencina en Chile; o gasolín) es un producto, derivado del petróleo por destilación, que se utiliza principalmente como combustible en la mayoría de motores de combustión interna de encendido por chispa, así como en estufas y lámparas y para limpieza con disolventes, entre otras aplicaciones.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://purl.org/holy/ns#FossilFuel" title="http://purl.org/holy/ns#FossilFuel">Combustible fósil</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MarcaInferior">
+  <h3>Marca Inferior<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#MarcaInferior</p>
+  <div class="comment">
+   <span class="markdown">Una marca de coche se refiere al fabricante o compañía que fabrica el vehículo, mientras que el modelo representa la versión o diseño específico. Por ejemplo PEUGOT o OPEL.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd></dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TienePaginaWeb" title="http://example.org/stelldj#TienePaginaWeb">tiene pagina web</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MarcaSuperior">
+  <h3>Marca Superior<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#MarcaSuperior</p>
+  <div class="comment">
+   <span class="markdown">Una marca superior se refiere al grupo que contiene al fabricante o compañía que fabrica el vehículo. Por ejemplo PSA o FCA.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd></dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TienePaginaWeb" title="http://example.org/stelldj#TienePaginaWeb">tiene pagina web</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ModeloVendido">
+  <h3>Modelo Vendido<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#ModeloVendido</p>
+  <div class="comment">
+   <span class="markdown">Un Modelo Vendido se refiere a un vehículo automotor que ha sido comercializado y transferido por una entidad concesionaria, actuando como intermediaria, a un cliente final que lo adquiere para uso personal o privado. Este concepto implica la existencia de una transacción formal, incluyendo un contrato de compraventa, y la entrega del coche al comprador, quien se convierte en su propietario registrado.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://purl.org/holy/ns#Car" title="http://purl.org/holy/ns#Car">Coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#Acelera0a100" title="http://example.org/stelldj#Acelera0a100">Aceleración de 0 a 100 Km/h</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#CombustibleCada100" title="http://example.org/stelldj#CombustibleCada100">Combustible consumido cada 100 Km</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#IsOwnedBy" title="http://example.org/stelldj#IsOwnedBy">Es propiedad de</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#PerteneceAGama" title="http://example.org/stelldj#PerteneceAGama">Pertenece a gama</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#PerteneceASegmento" title="http://example.org/stelldj#PerteneceASegmento">Pertenece a segmento</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#http://www.owl-ontologies.com/s4envi#hasColor" title="http://www.owl-ontologies.com/s4envi#hasColor">Tiene color</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneDA" title="http://example.org/stelldj#TieneDA">Tiene dispositivo ambiental</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TieneMotor" title="http://example.org/stelldj#TieneMotor">Tiene motor</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TieneRuedas" title="http://example.org/stelldj#TieneRuedas">Tiene ruedas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TieneTraccion" title="http://example.org/stelldj#TieneTraccion">Tiene traccion</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TieneAltura" title="http://example.org/stelldj#TieneAltura">tiene altura</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneAnchura" title="http://example.org/stelldj#TieneAnchura">tiene anchura</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneAutonomiaTotal" title="http://example.org/stelldj#TieneAutonomiaTotal">tiene autonomia total</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneCambio" title="http://example.org/stelldj#TieneCambio">tiene cambio</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TieneCapacidadMaletero" title="http://example.org/stelldj#TieneCapacidadMaletero">tiene capacidad maletero</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneLongitud" title="http://example.org/stelldj#TieneLongitud">tiene longitud</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TienePlazas" title="http://example.org/stelldj#TienePlazas">tiene plazas</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneVelocidadMaxima" title="http://example.org/stelldj#TieneVelocidadMaxima">tiene velocidad maxima</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#http://dbpedia.org/ontology/owns" title="http://dbpedia.org/ontology/owns">Posee</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#RealizoVenta" title="http://example.org/stelldj#RealizoVenta">Realizó venta</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#Asegura" title="http://example.org/stelldj#Asegura">asegura</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://saref.etsi.org/saref4bldg/Engine">
+  <h3>Motor<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://saref.etsi.org/saref4bldg/Engine</p>
+  <div class="comment">
+   <span class="markdown">Un motor es un dispositivo que convierte el combustible en energía mecánica mediante la combustión.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/saref4bldg/EnergyConversionDevice" title="https://saref.etsi.org/saref4bldg/EnergyConversionDevice">Dispositivo de conversión energética</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MotorDeCoche">
+  <h3>Motor De Coche<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#MotorDeCoche</p>
+  <div class="comment">
+   <span class="markdown">El motor de coche transforma la energía de combustión interna, la eléctrica o la combinación de ambas en energía que permite generar un continuo impulso mecánico cuya fuerza hace girar las ruedas para que el coche pueda desplazarse.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/saref4bldg/Engine" title="https://saref.etsi.org/saref4bldg/Engine">Motor</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#MotorElectrico" title="http://example.org/stelldj#MotorElectrico">Motor Electrico</a> <sup class="type-c" title="clase">c</sup>, <a href="#MotorHibrido" title="http://example.org/stelldj#MotorHibrido">Motor Híbrido</a> <sup class="type-c" title="clase">c</sup>, <a href="#MotorTermico" title="http://example.org/stelldj#MotorTermico">Motor Térmico</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#TieneCV" title="http://example.org/stelldj#TieneCV">Tiene CV</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#ConsumeCombustible" title="http://example.org/stelldj#ConsumeCombustible">consume combustible</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#TieneKV" title="http://example.org/stelldj#TieneKV">tiene KV</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneParMaximo" title="http://example.org/stelldj#TieneParMaximo">tiene par maximo</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#TieneMotor" title="http://example.org/stelldj#TieneMotor">Tiene motor</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MotorElectrico">
+  <h3>Motor Electrico<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#MotorElectrico</p>
+  <div class="comment">
+   <span class="markdown">Los motores eléctricos usan corriente alterna (AC) o corriente continua (DC) para activar los campos magnéticos del estátor y rotor, produciendo el movimiento de giro del eje del rotor para transmitir el movimiento mecánico y potencia al eje de tracción delantero y trasero.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#RecargaElectrica" title="http://example.org/stelldj#RecargaElectrica">recarga electrica</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MotorHibrido">
+  <h3>Motor Híbrido<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#MotorHibrido</p>
+  <div class="comment">
+   <span class="markdown">Un automóvil con motor híbrido es un tipo de vehículo caracterizado por tener dos juegos de motores diferentes pero complementarios: un motor de combustión interna con un depósito de combustible, más uno o varios motores eléctricos con batería. A lo que hay que sumar, por supuesto, las centralitas necesarias para pasar de un modo de conducción a otro o, incluso, usar ambas motorizaciones en paralelo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    equivalente a
+   </dt>
+   <dd>
+    <a href="#MotorElectrico" title="http://example.org/stelldj#MotorElectrico">Motor Electrico</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> <a href="#MotorTermico" title="http://example.org/stelldj#MotorTermico">Motor Térmico</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#Cilindrada" title="http://example.org/stelldj#Cilindrada">Cilindrada</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#RecargaElectrica" title="http://example.org/stelldj#RecargaElectrica">recarga electrica</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MotorTermico">
+  <h3>Motor Térmico<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#MotorTermico</p>
+  <div class="comment">
+   <span class="markdown">Un motor térmico es un tipo de propulsor que convierte la energía térmica liberada por la combustión en energía mecánica. Estos motores utilizan la combustión de un combustible, como gasolina, diésel o gas natural, para generar calor y producir movimiento. Existen diferentes tipos de motores térmicos, incluidos los de combustión interna y los motores de combustión externa.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#Cilindrada" title="http://example.org/stelldj#Cilindrada">Cilindrada</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TelephoneNumber">
+  <h3>Número de Teléfono<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TelephoneNumber</p>
+  <div class="comment">
+   <span class="markdown">Un número de teléfono (abreviado como: tfno., tlf., teléf. o tel.)​ es una secuencia de dígitos utilizada para identificar una línea telefónica dentro de una red telefónica conmutada (RTC). El número contiene la información necesaria para identificar el punto final de la llamada. Los números de teléfono están a menudo asignados a líneas que tienen conectados dispositivos distintos de un teléfono, tales como faxes y módems. Cada uno de esos puntos de terminación de red tienen que tener un número único en la red para poder realizar una llamada telefónica.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd></dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/saref#hasValue" title="http://www.owl-ontologies.com/saref#hasValue">Tiene valor</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#TieneNumero" title="http://example.org/stelldj#TieneNumero">Tiene numero</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/Person">
+  <h3>Persona<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/Person</p>
+  <div class="comment">
+   <span class="markdown">Individuo de la especie humana.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Estado
+   </dt>
+   <dd>
+    stable
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#Comprador" title="http://example.org/stelldj#Comprador">Comprador</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Rueda">
+  <h3>Rueda<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Rueda</p>
+  <div class="comment">
+   <span class="markdown">La rueda es una pieza circular que es fundamental en diferentes aspectos de la vida humana, especialmente en la ducha de los vehículos automóviles. Esencialmente, la rueda es un dispositivo que facilita el movimiento al reducir la fricción entre un cuerpo y la superficie sobre la que se sitúa.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd></dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#TieneAltura" title="http://example.org/stelldj#TieneAltura">tiene altura</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneAnchura" title="http://example.org/stelldj#TieneAnchura">tiene anchura</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#TieneLongitud" title="http://example.org/stelldj#TieneLongitud">tiene longitud</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#TieneRuedas" title="http://example.org/stelldj#TieneRuedas">Tiene ruedas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.disit.org/km4city/schema#Insurance">
+  <h3>Seguro<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.disit.org/km4city/schema#Insurance</p>
+  <div class="comment">
+   <span class="markdown">Un seguro o aseguración1​es un contrato, denominado póliza de seguro, por el que una Compañía de Seguros (el asegurador) se compromete, mediante el cobro de una prima y para el caso de que se produzca el evento cuyo riesgo es objeto de cobertura a indemnizar, dentro de los límites pactados, el daño producido al asegurado; bien a través de un capital, una renta, o a través de la prestación de un servicio. En este contrato intervienen: el asegurador, que siempre ha de ser una compañía de seguros, que es la entidad responsable de la cobertura en caso de siniestro; el asegurado, propietario de la póliza de seguro y responsable del pago de la prima correspondiente; y el beneficiario, que es la persona que cobrará la indemnización correspondiente en caso de siniestro. No siempre estas tres figuras han de ser la misma persona pudiendo ser todos distintos.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeguroDeCoche">
+  <h3>Seguro De Coche<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#SeguroDeCoche</p>
+  <div class="comment">
+   <span class="markdown">El seguro de coche ayuda a pagar por los daños y lesiones cuando ocurre un accidente de coches.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://www.disit.org/km4city/schema#Insurance" title="http://www.disit.org/km4city/schema#Insurance">Seguro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#IsOwnedBy" title="http://example.org/stelldj#IsOwnedBy">Es propiedad de</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#Asegura" title="http://example.org/stelldj#Asegura">asegura</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#http://schema.org/price" title="http://schema.org/price">price</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#http://dbpedia.org/ontology/owns" title="http://dbpedia.org/ontology/owns">Posee</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Traccion4x4">
+  <h3>Traccion4x4<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Traccion4x4</p>
+  <div class="comment">
+   <span class="markdown">La tracción en las cuatro ruedas, doble tracción, tracción integral o tracción total son expresiones comúnmente usadas para referirse a vehículos de turismo, todocamino y todoterreno de dos ejes. Generalmente abreviada como 4×4, o 4WD (4 Wheel Drive) y AWD (All Wheel Drive) en los países anglosajones, es un sistema de transmisión en un automóvil en el que ambos ejes pueden recibir simultáneamente la potencia del motor.​ La mayoría de los automóviles todoterreno y camionetas tienen tracción en las cuatro ruedas, y también algunos turismos y deportivos de alta gama</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#Traccion" title="http://example.org/stelldj#Traccion">Tracción de coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Traccion">
+  <h3>Tracción de coche<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Traccion</p>
+  <div class="comment">
+   <span class="markdown">Fuerza que permite al automóvil avanzar sin resbalar</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#Traccion4x4" title="http://example.org/stelldj#Traccion4x4">Traccion4x4</a> <sup class="type-c" title="clase">c</sup>, <a href="#TraccionFrontal" title="http://example.org/stelldj#TraccionFrontal">Tracción Delantera</a> <sup class="type-c" title="clase">c</sup>, <a href="#TraccionTrasera" title="http://example.org/stelldj#TraccionTrasera">Tracción Trasera</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#TieneTraccion" title="http://example.org/stelldj#TieneTraccion">Tiene traccion</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TraccionFrontal">
+  <h3>Tracción Delantera<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TraccionFrontal</p>
+  <div class="comment">
+   <span class="markdown">La tracción delantera (abreviada como FWD por sus siglas en inglés; en idiomas como el francés se utiliza simplemente la palabra "traction" para referirse a que la impulsión se halla en el eje delantero, y "propulsión" para denominar a la tracción trasera) es el sistema en el que el par motor se transmite solo al eje delantero. Es el mismo eje en el cual se suele encontrar la dirección del vehículo. La mayoría de los vehículos de tracción delantera incorporan el diferencial en la estructura de la caja de cambios.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#Traccion" title="http://example.org/stelldj#Traccion">Tracción de coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TraccionTrasera">
+  <h3>Tracción Trasera<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TraccionTrasera</p>
+  <div class="comment">
+   <span class="markdown">La tracción trasera o propulsión trasera​ (abreviada como "RWD" por sus siglas en inglés) es el sistema en el que la transmisión del movimiento del motor de un vehículo se realiza sobre el eje trasero.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#Traccion" title="http://example.org/stelldj#Traccion">Tracción de coche</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h2>Propiedades entre objetos</h2>
+ <ul class="hlist">
+  <li><a href="#Asegura" title="http://example.org/stelldj#Asegura">asegura</a></li>
+  <li><a href="#ConsumeCombustible" title="http://example.org/stelldj#ConsumeCombustible">consume combustible</a></li>
+  <li><a href="#IsOwnedBy" title="http://example.org/stelldj#IsOwnedBy">Es propiedad de</a></li>
+  <li><a href="#http://www.owl-ontologies.com/dco#isLocatedAt" title="http://www.owl-ontologies.com/dco#isLocatedAt">Está localizado en</a></li>
+  <li><a href="#PermiteAparcarGratis" title="http://example.org/stelldj#PermiteAparcarGratis">permite aparcar gratis</a></li>
+  <li><a href="#https://w3id.org/EUTaxO#belongsTo" title="https://w3id.org/EUTaxO#belongsTo">Pertenece a</a></li>
+  <li><a href="#http://dbpedia.org/ontology/owns" title="http://dbpedia.org/ontology/owns">Posee</a></li>
+  <li><a href="#RealizoVenta" title="http://example.org/stelldj#RealizoVenta">Realizó venta</a></li>
+  <li><a href="#TieneCambio" title="http://example.org/stelldj#TieneCambio">tiene cambio</a></li>
+  <li><a href="#TieneDA" title="http://example.org/stelldj#TieneDA">Tiene dispositivo ambiental</a></li>
+  <li><a href="#TieneMotor" title="http://example.org/stelldj#TieneMotor">Tiene motor</a></li>
+  <li><a href="#TieneNumero" title="http://example.org/stelldj#TieneNumero">Tiene numero</a></li>
+  <li><a href="#TieneRuedas" title="http://example.org/stelldj#TieneRuedas">Tiene ruedas</a></li>
+  <li><a href="#TieneTraccion" title="http://example.org/stelldj#TieneTraccion">Tiene traccion</a></li>
+ </ul>
+ <div class="entity" id="Asegura">
+  <h3>asegura<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Asegura</p>
+  <div class="comment">
+   <span class="markdown">Concierta una póliza de seguros con una entidad aseguradora para prevenir las consecuencias económicas desfavorables de un riesgo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ConsumeCombustible">
+  <h3>consume combustible<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#ConsumeCombustible</p>
+  <div class="comment">
+   <span class="markdown">Combustible utilizado para hacer funcionar un vehículo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#http://purl.org/holy/ns#FossilFuel" title="http://purl.org/holy/ns#FossilFuel">Combustible fósil</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/timebank#Electricity" title="https://w3id.org/timebank#Electricity">Electricidad</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="IsOwnedBy">
+  <h3>Es propiedad de<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#IsOwnedBy</p>
+  <div class="comment">
+   <span class="markdown">Relación de pertenencia que tiene un objeto con una persona o lugar</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Comprador" title="http://example.org/stelldj#Comprador">Comprador</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     inversa de
+    </dt>
+    <dd>
+     <a href="#http://dbpedia.org/ontology/owns" title="http://dbpedia.org/ontology/owns">Posee</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/dco#isLocatedAt">
+  <h3>Está localizado en<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/dco#isLocatedAt</p>
+  <div class="comment">
+   <span class="markdown">Posición o punto geográfico en el que se encuentra un determinado lugar, comercio u objeto</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Concesionario" title="http://example.org/stelldj#Concesionario">Concesionario</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#http://dbpedia.org/ontology/City" title="http://dbpedia.org/ontology/City">Ciudad</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="PermiteAparcarGratis">
+  <h3>permite aparcar gratis<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#PermiteAparcarGratis</p>
+  <div class="comment">
+   <span class="markdown">Relación entre el vehículo y el lugar donde puede aparcar sin coste adicional</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ECO" title="http://example.org/stelldj#ECO">E C O</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#0" title="http://example.org/stelldj#0">0</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#http://dbpedia.org/ontology/CapitalOfRegion" title="http://dbpedia.org/ontology/CapitalOfRegion">Capital de Región</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/EUTaxO#belongsTo">
+  <h3>Pertenece a<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/EUTaxO#belongsTo</p>
+  <div class="comment">
+   <span class="markdown">Defines a hierarchy from more generic taxa, to more specific ones</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> transitiva</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MarcaInferior" title="http://example.org/stelldj#MarcaInferior">Marca Inferior</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MarcaSuperior" title="http://example.org/stelldj#MarcaSuperior">Marca Superior</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#MarcaInferior" title="http://example.org/stelldj#MarcaInferior">Marca Inferior</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MarcaSuperior" title="http://example.org/stelldj#MarcaSuperior">Marca Superior</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://dbpedia.org/ontology/owns">
+  <h3>Posee<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://dbpedia.org/ontology/owns</p>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Comprador" title="http://example.org/stelldj#Comprador">Comprador</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     inversa de
+    </dt>
+    <dd>
+     <a href="#IsOwnedBy" title="http://example.org/stelldj#IsOwnedBy">Es propiedad de</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="RealizoVenta">
+  <h3>Realizó venta<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#RealizoVenta</p>
+  <div class="comment">
+   <span class="markdown">Relación entre persona o entidad y el objeto que fue vendido</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Concesionario" title="http://example.org/stelldj#Concesionario">Concesionario</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneCambio">
+  <h3>tiene cambio<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneCambio</p>
+  <div class="comment">
+   <span class="markdown">Relación entre la caja de cambios y el ccohe que la posee</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#CajaDeCambios" title="http://example.org/stelldj#CajaDeCambios">Caja De Cambios</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneDA">
+  <h3>Tiene dispositivo ambiental<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneDA</p>
+  <div class="comment">
+   <span class="markdown">Relación entre el dispositivo ambiental de un coche y el propio coche</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneMotor">
+  <h3>Tiene motor<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneMotor</p>
+  <div class="comment">
+   <span class="markdown">Relación entre el motor de un coche y el propio coche</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneNumero">
+  <h3>Tiene numero<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneNumero</p>
+  <div class="comment">
+   <span class="markdown">Relación entre el número de teléfono de una persona o entidad y la propia persona o entidad</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Comprador" title="http://example.org/stelldj#Comprador">Comprador</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#Concesionario" title="http://example.org/stelldj#Concesionario">Concesionario</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#TelephoneNumber" title="http://example.org/stelldj#TelephoneNumber">Número de Teléfono</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneRuedas">
+  <h3>Tiene ruedas<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneRuedas</p>
+  <div class="comment">
+   <span class="markdown">Relación entre las ruedas de un coche y el propio coche</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Rueda" title="http://example.org/stelldj#Rueda">Rueda</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneTraccion">
+  <h3>Tiene traccion<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneTraccion</p>
+  <div class="comment">
+   <span class="markdown">Relación entre la tracción de un coche y el coche</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Traccion" title="http://example.org/stelldj#Traccion">Tracción de coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
+ <ul class="hlist">
+  <li><a href="#Acelera0a100" title="http://example.org/stelldj#Acelera0a100">Aceleración de 0 a 100 Km/h</a></li>
+  <li><a href="#Cilindrada" title="http://example.org/stelldj#Cilindrada">Cilindrada</a></li>
+  <li><a href="#CombustibleCada100" title="http://example.org/stelldj#CombustibleCada100">Combustible consumido cada 100 Km</a></li>
+  <li><a href="#EmisionesWLTP" title="http://example.org/stelldj#EmisionesWLTP">Emisiones WLTP</a></li>
+  <li><a href="#FechaDeVenta" title="http://example.org/stelldj#FechaDeVenta">Fecha de venta</a></li>
+  <li><a href="#Marchas" title="http://example.org/stelldj#Marchas">Marchas</a></li>
+  <li><a href="#PerteneceAGama" title="http://example.org/stelldj#PerteneceAGama">Pertenece a gama</a></li>
+  <li><a href="#PerteneceASegmento" title="http://example.org/stelldj#PerteneceASegmento">Pertenece a segmento</a></li>
+  <li><a href="#http://schema.org/price" title="http://schema.org/price">price</a></li>
+  <li><a href="#RecargaElectrica" title="http://example.org/stelldj#RecargaElectrica">recarga electrica</a></li>
+  <li><a href="#TieneAltura" title="http://example.org/stelldj#TieneAltura">tiene altura</a></li>
+  <li><a href="#TieneAnchura" title="http://example.org/stelldj#TieneAnchura">tiene anchura</a></li>
+  <li><a href="#TieneAutonomiaTotal" title="http://example.org/stelldj#TieneAutonomiaTotal">tiene autonomia total</a></li>
+  <li><a href="#TieneCapacidadMaletero" title="http://example.org/stelldj#TieneCapacidadMaletero">tiene capacidad maletero</a></li>
+  <li><a href="#http://www.owl-ontologies.com/s4envi#hasColor" title="http://www.owl-ontologies.com/s4envi#hasColor">Tiene color</a></li>
+  <li><a href="#TieneCV" title="http://example.org/stelldj#TieneCV">Tiene CV</a></li>
+  <li><a href="#TieneKV" title="http://example.org/stelldj#TieneKV">tiene KV</a></li>
+  <li><a href="#TieneLongitud" title="http://example.org/stelldj#TieneLongitud">tiene longitud</a></li>
+  <li><a href="#hasName" title="http://example.org/stelldj#hasName">Tiene nombre</a></li>
+  <li><a href="#TienePaginaWeb" title="http://example.org/stelldj#TienePaginaWeb">tiene pagina web</a></li>
+  <li><a href="#TieneParMaximo" title="http://example.org/stelldj#TieneParMaximo">tiene par maximo</a></li>
+  <li><a href="#TienePlazas" title="http://example.org/stelldj#TienePlazas">tiene plazas</a></li>
+  <li><a href="#http://www.owl-ontologies.com/saref#hasValue" title="http://www.owl-ontologies.com/saref#hasValue">Tiene valor</a></li>
+  <li><a href="#TieneVelocidadMaxima" title="http://example.org/stelldj#TieneVelocidadMaxima">tiene velocidad maxima</a></li>
+ </ul>
+ <div class="entity" id="Acelera0a100">
+  <h3>Aceleración de 0 a 100 Km/h<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Acelera0a100</p>
+  <div class="comment">
+   <span class="markdown">Tiempo que tarda un coche en pasar de 0 a 100 Km/h</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Cilindrada">
+  <h3>Cilindrada<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Cilindrada</p>
+  <div class="comment">
+   <span class="markdown">La cilindrada de un carro, también conocida como desplazamiento del motor, es el volumen combinado de barrido de los pistones dentro de los cilindros de un motor, y se expresa en litros o centímetros cúbicos (c.c. o cm^3).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MotorHibrido" title="http://example.org/stelldj#MotorHibrido">Motor Híbrido</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MotorTermico" title="http://example.org/stelldj#MotorTermico">Motor Térmico</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="CombustibleCada100">
+  <h3>Combustible consumido cada 100 Km<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#CombustibleCada100</p>
+  <div class="comment">
+   <span class="markdown">Combustible consumido por el vehículo en 100 Km</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="EmisionesWLTP">
+  <h3>Emisiones WLTP<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#EmisionesWLTP</p>
+  <div class="comment">
+   <span class="markdown">Emisiones emitidas por un coche de acuerdo con WLTP</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="FechaDeVenta">
+  <h3>Fecha de venta<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#FechaDeVenta</p>
+  <div class="comment">
+   <span class="markdown">Fecha en la que se realizó la venta del vehículo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Concesionario" title="http://example.org/stelldj#Concesionario">Concesionario</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Marchas">
+  <h3>Marchas<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#Marchas</p>
+  <div class="comment">
+   <span class="markdown">Número de marchas del coche.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#CajaDeCambios" title="http://example.org/stelldj#CajaDeCambios">Caja De Cambios</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="PerteneceAGama">
+  <h3>Pertenece a gama<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#PerteneceAGama</p>
+  <div class="comment">
+   <span class="markdown">Gama en la que se sitúa un coche debido a su precio de venta al público</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="PerteneceASegmento">
+  <h3>Pertenece a segmento<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#PerteneceASegmento</p>
+  <div class="comment">
+   <span class="markdown">Los segmentos de coches son clasificaciones utilizadas por la industria automovilística para agrupar vehículos según características como tamaño, capacidad, precio y tipo de motor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://schema.org/price">
+  <h3>price<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/price</p>
+  <div class="comment">
+   <span class="markdown">El precio de oferta de un producto, o de un componente del precio cuando se adjunta a PriceSpecification y sus subtipos.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Definida por
+   </dt>
+   <dd>
+    <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#SeguroDeCoche" title="http://example.org/stelldj#SeguroDeCoche">Seguro De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="RecargaElectrica">
+  <h3>recarga electrica<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#RecargaElectrica</p>
+  <div class="comment">
+   <span class="markdown">Cantidad de carga que pasa por la sección transversal de un conductor eléctrico en un segundo, cuando la corriente eléctrica es de un amperio.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MotorElectrico" title="http://example.org/stelldj#MotorElectrico">Motor Electrico</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MotorHibrido" title="http://example.org/stelldj#MotorHibrido">Motor Híbrido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneAltura">
+  <h3>tiene altura<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneAltura</p>
+  <div class="comment">
+   <span class="markdown">Medida del coche considerada verticalmente desde su punto más elevado hasta su base.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#Rueda" title="http://example.org/stelldj#Rueda">Rueda</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneAnchura">
+  <h3>tiene anchura<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneAnchura</p>
+  <div class="comment">
+   <span class="markdown">Medida del coche considerada horizontalmente desde un lado al otro.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#Rueda" title="http://example.org/stelldj#Rueda">Rueda</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneAutonomiaTotal">
+  <h3>tiene autonomia total<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneAutonomiaTotal</p>
+  <div class="comment">
+   <span class="markdown">Distancia que puede recorrer el vehículo con un depósito completo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneCapacidadMaletero">
+  <h3>tiene capacidad maletero<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneCapacidadMaletero</p>
+  <div class="comment">
+   <span class="markdown">Volumen que tiene el maletero del vehículo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/s4envi#hasColor">
+  <h3>Tiene color<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/s4envi#hasColor</p>
+  <div class="comment">
+   <span class="markdown">Una relación entre la luz emitida y su color.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneCV">
+  <h3>Tiene CV<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneCV</p>
+  <div class="comment">
+   <span class="markdown">Caballos de vapor (CV) que tiene de potencia del vehículo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneKV">
+  <h3>tiene KV<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneKV</p>
+  <div class="comment">
+   <span class="markdown">Kilovatios (KV) que tiene de potencia del vehículo, siendo esta la potencia según el Sistema Internacional de Unidades</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneLongitud">
+  <h3>tiene longitud<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneLongitud</p>
+  <div class="comment">
+   <span class="markdown">Medida que expresa la distancia entre dos puntos</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#Rueda" title="http://example.org/stelldj#Rueda">Rueda</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasName">
+  <h3>Tiene nombre<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#hasName</p>
+  <div class="comment">
+   <span class="markdown">Nombre del comprador</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Comprador" title="http://example.org/stelldj#Comprador">Comprador</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TienePaginaWeb">
+  <h3>tiene pagina web<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TienePaginaWeb</p>
+  <div class="comment">
+   <span class="markdown">URL a la página web de referencia</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#DispositivoAmbiental" title="http://example.org/stelldj#DispositivoAmbiental">Dispositivo Ambiental</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MarcaInferior" title="http://example.org/stelldj#MarcaInferior">Marca Inferior</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MarcaSuperior" title="http://example.org/stelldj#MarcaSuperior">Marca Superior</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneParMaximo">
+  <h3>tiene par maximo<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneParMaximo</p>
+  <div class="comment">
+   <span class="markdown">Fuerza que el motor es capaz de transmitir en un régimen de giro sobre un eje de transmisión</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MotorDeCoche" title="http://example.org/stelldj#MotorDeCoche">Motor De Coche</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TienePlazas">
+  <h3>tiene plazas<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TienePlazas</p>
+  <div class="comment">
+   <span class="markdown">Número de asientos del vehículo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/saref#hasValue">
+  <h3>Tiene valor<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/saref#hasValue</p>
+  <div class="comment">
+   <span class="markdown">Valor de una propiedad expresado como un literal RDF. Tenga en cuenta que, aunque se esperen valores decimales, los valores podrían utilizar otros tipos de datos.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#TelephoneNumber" title="http://example.org/stelldj#TelephoneNumber">Número de Teléfono</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="TieneVelocidadMaxima">
+  <h3>tiene velocidad maxima<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/stelldj#TieneVelocidadMaxima</p>
+  <div class="comment">
+   <span class="markdown">Máximo cantidad de espacio por unidad de tiempo capaz de ser recorrida por el vehículo</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ModeloVendido" title="http://example.org/stelldj#ModeloVendido">Modelo Vendido</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h2>Propiedades de anotación</h2>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel"> <span>alt Label</span> </a></li>
+  <li><a href="#https://w3id.org/mod#createdWith" title="https://w3id.org/mod#createdWith"> <span>created With</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition"> <span>definition</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example"> <span>example</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#hadPrimarySource" title="http://www.w3.org/ns/prov#hadPrimarySource"> <span>had Primary Source</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#hiddenLabel" title="http://www.w3.org/2004/02/skos/core#hiddenLabel"> <span>hidden Label</span> </a></li>
+  <li><a href="#https://wordnet-rdf.princeton.edu/ontology#hyponym" title="https://wordnet-rdf.princeton.edu/ontology#hyponym"> <span>hyponym</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references"> <span>references</span> </a></li>
+  <li><a href="#http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" title="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"> <span>term status</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo"> <span>version Info</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#altLabel">
+  <h3>alt Label<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#altLabel</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#createdWith">
+  <h3>created With<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#createdWith</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+  <h3>creator<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+  <h3>definition<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#example">
+  <h3>example<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#example</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#hadPrimarySource">
+  <h3>had Primary Source<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#hadPrimarySource</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+  <h3>hidden Label<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#hiddenLabel</p>
+ </div>
+ <div class="entity" id="https://wordnet-rdf.princeton.edu/ontology#hyponym">
+  <h3>hyponym<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://wordnet-rdf.princeton.edu/ontology#hyponym</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/references">
+  <h3>references<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/references</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+  <h3>term status<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2003/06/sw-vocab-status/ns#term_status</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/title">
+  <h3>title<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#versionInfo">
+  <h3>version Info<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionInfo</p>
+ </div>
+</div><div id="legend">
+<h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Clases">c</sup>: Clases <br/>
+<sup class="type-op" title="Propiedades de objeto">op</sup>: Propiedades de objeto <br/>
+<sup class="type-dp" title="Propiedades de datos">dp</sup>: Propiedades de datos <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">Referencias <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">A&ntilde;ade aqu&iacute; tus referencias, a ser posible en una lista.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Agradecimientos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<p>Los autores agradecen a <a href="http://www.essepuntato.it/">Silvio Peroni</a> el desarrollo de <a href="http://www.essepuntato.it/lode">LODE</a>, un entorno de documentaci&oacute;n para OWL que es usado para generar la descripci&oacute;n de t&eacute;rminos de la ontolog&iacute;a de este documento; y a  <a href="http://purl.org/net/dgarijo">Daniel Garijo</a> por desarrollar <a href="https://github.com/dgarijo/Widoco">Widoco</a>, el programa utilizado para producir la plantilla en la que se basa este documento.</p>
+</div>
+
+
+</div>
+</body>
+</html>
